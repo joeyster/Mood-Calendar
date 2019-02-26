@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D453D0642220D7D4006E6197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0632220D7D4006E6197 /* AppDelegate.swift */; };
+		D453D0692220D7D4006E6197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D453D0672220D7D4006E6197 /* Main.storyboard */; };
+		D453D06E2220D7D5006E6197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D453D06C2220D7D5006E6197 /* LaunchScreen.storyboard */; };
+		D453D0792220D7D5006E6197 /* Mood_CalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0782220D7D5006E6197 /* Mood_CalendarTests.swift */; };
+		D453D0842220D7D5006E6197 /* Mood_CalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0832220D7D5006E6197 /* Mood_CalendarUITests.swift */; };
+		D453D0922220D9AB006E6197 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0912220D9AB006E6197 /* CalendarVC.swift */; };
+		D453D0942220D9B9006E6197 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0932220D9B9006E6197 /* TodayVC.swift */; };
+		D4AA07212224B0FB00A17069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4AA07202224B0FB00A17069 /* Assets.xcassets */; };
+		D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA07222224BD6200A17069 /* UITabBarVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D453D0752220D7D5006E6197 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D453D0582220D7D4006E6197 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D453D05F2220D7D4006E6197;
+			remoteInfo = "Mood Calendar";
+		};
+		D453D0802220D7D5006E6197 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D453D0582220D7D4006E6197 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D453D05F2220D7D4006E6197;
+			remoteInfo = "Mood Calendar";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D453D0602220D7D4006E6197 /* Mood Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mood Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D453D0632220D7D4006E6197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D453D0682220D7D4006E6197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D453D06D2220D7D5006E6197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D453D06F2220D7D5006E6197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D453D0742220D7D5006E6197 /* Mood CalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mood CalendarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D453D0782220D7D5006E6197 /* Mood_CalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood_CalendarTests.swift; sourceTree = "<group>"; };
+		D453D07A2220D7D5006E6197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D453D07F2220D7D5006E6197 /* Mood CalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mood CalendarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D453D0832220D7D5006E6197 /* Mood_CalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood_CalendarUITests.swift; sourceTree = "<group>"; };
+		D453D0852220D7D5006E6197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D453D0912220D9AB006E6197 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		D453D0932220D9B9006E6197 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		D4AA07202224B0FB00A17069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4AA07222224BD6200A17069 /* UITabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D453D05D2220D7D4006E6197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D453D0712220D7D5006E6197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D453D07C2220D7D5006E6197 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D453D0572220D7D4006E6197 = {
+			isa = PBXGroup;
+			children = (
+				D453D0622220D7D4006E6197 /* Mood Calendar */,
+				D453D0772220D7D5006E6197 /* Mood CalendarTests */,
+				D453D0822220D7D5006E6197 /* Mood CalendarUITests */,
+				D453D0612220D7D4006E6197 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D453D0612220D7D4006E6197 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D453D0602220D7D4006E6197 /* Mood Calendar.app */,
+				D453D0742220D7D5006E6197 /* Mood CalendarTests.xctest */,
+				D453D07F2220D7D5006E6197 /* Mood CalendarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D453D0622220D7D4006E6197 /* Mood Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D453D0912220D9AB006E6197 /* CalendarVC.swift */,
+				D453D0932220D9B9006E6197 /* TodayVC.swift */,
+				D453D0632220D7D4006E6197 /* AppDelegate.swift */,
+				D453D0672220D7D4006E6197 /* Main.storyboard */,
+				D4AA07222224BD6200A17069 /* UITabBarVC.swift */,
+				D453D06C2220D7D5006E6197 /* LaunchScreen.storyboard */,
+				D453D06F2220D7D5006E6197 /* Info.plist */,
+				D4AA07202224B0FB00A17069 /* Assets.xcassets */,
+			);
+			path = "Mood Calendar";
+			sourceTree = "<group>";
+		};
+		D453D0772220D7D5006E6197 /* Mood CalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				D453D0782220D7D5006E6197 /* Mood_CalendarTests.swift */,
+				D453D07A2220D7D5006E6197 /* Info.plist */,
+			);
+			path = "Mood CalendarTests";
+			sourceTree = "<group>";
+		};
+		D453D0822220D7D5006E6197 /* Mood CalendarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D453D0832220D7D5006E6197 /* Mood_CalendarUITests.swift */,
+				D453D0852220D7D5006E6197 /* Info.plist */,
+			);
+			path = "Mood CalendarUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D453D05F2220D7D4006E6197 /* Mood Calendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D453D0882220D7D5006E6197 /* Build configuration list for PBXNativeTarget "Mood Calendar" */;
+			buildPhases = (
+				D453D05C2220D7D4006E6197 /* Sources */,
+				D453D05D2220D7D4006E6197 /* Frameworks */,
+				D453D05E2220D7D4006E6197 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mood Calendar";
+			productName = "Mood Calendar";
+			productReference = D453D0602220D7D4006E6197 /* Mood Calendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D453D0732220D7D5006E6197 /* Mood CalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D453D08B2220D7D5006E6197 /* Build configuration list for PBXNativeTarget "Mood CalendarTests" */;
+			buildPhases = (
+				D453D0702220D7D5006E6197 /* Sources */,
+				D453D0712220D7D5006E6197 /* Frameworks */,
+				D453D0722220D7D5006E6197 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D453D0762220D7D5006E6197 /* PBXTargetDependency */,
+			);
+			name = "Mood CalendarTests";
+			productName = "Mood CalendarTests";
+			productReference = D453D0742220D7D5006E6197 /* Mood CalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D453D07E2220D7D5006E6197 /* Mood CalendarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D453D08E2220D7D5006E6197 /* Build configuration list for PBXNativeTarget "Mood CalendarUITests" */;
+			buildPhases = (
+				D453D07B2220D7D5006E6197 /* Sources */,
+				D453D07C2220D7D5006E6197 /* Frameworks */,
+				D453D07D2220D7D5006E6197 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D453D0812220D7D5006E6197 /* PBXTargetDependency */,
+			);
+			name = "Mood CalendarUITests";
+			productName = "Mood CalendarUITests";
+			productReference = D453D07F2220D7D5006E6197 /* Mood CalendarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D453D0582220D7D4006E6197 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Joey Liao";
+				TargetAttributes = {
+					D453D05F2220D7D4006E6197 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D453D0732220D7D5006E6197 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D453D05F2220D7D4006E6197;
+					};
+					D453D07E2220D7D5006E6197 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D453D05F2220D7D4006E6197;
+					};
+				};
+			};
+			buildConfigurationList = D453D05B2220D7D4006E6197 /* Build configuration list for PBXProject "Mood Calendar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D453D0572220D7D4006E6197;
+			productRefGroup = D453D0612220D7D4006E6197 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D453D05F2220D7D4006E6197 /* Mood Calendar */,
+				D453D0732220D7D5006E6197 /* Mood CalendarTests */,
+				D453D07E2220D7D5006E6197 /* Mood CalendarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D453D05E2220D7D4006E6197 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D453D06E2220D7D5006E6197 /* LaunchScreen.storyboard in Resources */,
+				D4AA07212224B0FB00A17069 /* Assets.xcassets in Resources */,
+				D453D0692220D7D4006E6197 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D453D0722220D7D5006E6197 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D453D07D2220D7D5006E6197 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D453D05C2220D7D4006E6197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D453D0942220D9B9006E6197 /* TodayVC.swift in Sources */,
+				D453D0922220D9AB006E6197 /* CalendarVC.swift in Sources */,
+				D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */,
+				D453D0642220D7D4006E6197 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D453D0702220D7D5006E6197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D453D0792220D7D5006E6197 /* Mood_CalendarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D453D07B2220D7D5006E6197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D453D0842220D7D5006E6197 /* Mood_CalendarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D453D0762220D7D5006E6197 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D453D05F2220D7D4006E6197 /* Mood Calendar */;
+			targetProxy = D453D0752220D7D5006E6197 /* PBXContainerItemProxy */;
+		};
+		D453D0812220D7D5006E6197 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D453D05F2220D7D4006E6197 /* Mood Calendar */;
+			targetProxy = D453D0802220D7D5006E6197 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D453D0672220D7D4006E6197 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D453D0682220D7D4006E6197 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D453D06C2220D7D5006E6197 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D453D06D2220D7D5006E6197 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D453D0862220D7D5006E6197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D453D0872220D7D5006E6197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D453D0892220D7D5006E6197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GDGTNVK4H5;
+				INFOPLIST_FILE = "Mood Calendar/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-Calendar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D453D08A2220D7D5006E6197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GDGTNVK4H5;
+				INFOPLIST_FILE = "Mood Calendar/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-Calendar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D453D08C2220D7D5006E6197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GDGTNVK4H5;
+				INFOPLIST_FILE = "Mood CalendarTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-CalendarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mood Calendar.app/Mood Calendar";
+			};
+			name = Debug;
+		};
+		D453D08D2220D7D5006E6197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GDGTNVK4H5;
+				INFOPLIST_FILE = "Mood CalendarTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-CalendarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mood Calendar.app/Mood Calendar";
+			};
+			name = Release;
+		};
+		D453D08F2220D7D5006E6197 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GDGTNVK4H5;
+				INFOPLIST_FILE = "Mood CalendarUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-CalendarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mood Calendar";
+			};
+			name = Debug;
+		};
+		D453D0902220D7D5006E6197 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GDGTNVK4H5;
+				INFOPLIST_FILE = "Mood CalendarUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-CalendarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mood Calendar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D453D05B2220D7D4006E6197 /* Build configuration list for PBXProject "Mood Calendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D453D0862220D7D5006E6197 /* Debug */,
+				D453D0872220D7D5006E6197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D453D0882220D7D5006E6197 /* Build configuration list for PBXNativeTarget "Mood Calendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D453D0892220D7D5006E6197 /* Debug */,
+				D453D08A2220D7D5006E6197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D453D08B2220D7D5006E6197 /* Build configuration list for PBXNativeTarget "Mood CalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D453D08C2220D7D5006E6197 /* Debug */,
+				D453D08D2220D7D5006E6197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D453D08E2220D7D5006E6197 /* Build configuration list for PBXNativeTarget "Mood CalendarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D453D08F2220D7D5006E6197 /* Debug */,
+				D453D0902220D7D5006E6197 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D453D0582220D7D4006E6197 /* Project object */;
+}
