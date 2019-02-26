@@ -7,7 +7,6 @@ class UITabBarVC: UITabBarController {
         super.viewDidLoad()
         
         let weekday = NSCalendar.current.component(.weekday, from: Date())
-        print(weekday)
         switch weekday{
         case 1:
             print("Sunday")
