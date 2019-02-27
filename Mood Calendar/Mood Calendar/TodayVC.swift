@@ -52,6 +52,7 @@ class TodayVC: UIViewController {
     @IBOutlet var F6: UIButton!
     
     var model = MonthCalendar()
+    var moodColor:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
