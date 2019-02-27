@@ -1,9 +1,6 @@
 import UIKit
 
-class CalendarVC: UIViewController {
-    
-    var model = MonthCalendar()
-    
+class DetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }

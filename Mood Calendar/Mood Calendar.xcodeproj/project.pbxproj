@@ -14,6 +14,7 @@
 		D453D0842220D7D5006E6197 /* Mood_CalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0832220D7D5006E6197 /* Mood_CalendarUITests.swift */; };
 		D453D0922220D9AB006E6197 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0912220D9AB006E6197 /* CalendarVC.swift */; };
 		D453D0942220D9B9006E6197 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0932220D9B9006E6197 /* TodayVC.swift */; };
+		D45B45F722262E1B00CC000B /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B45F622262E1B00CC000B /* DetailVC.swift */; };
 		D4AA07212224B0FB00A17069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4AA07202224B0FB00A17069 /* Assets.xcassets */; };
 		D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA07222224BD6200A17069 /* UITabBarVC.swift */; };
 		D4FBFC5E2224DF2A00EE1A62 /* MonthCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */; };
@@ -50,6 +51,7 @@
 		D453D0852220D7D5006E6197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D453D0912220D9AB006E6197 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		D453D0932220D9B9006E6197 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		D45B45F622262E1B00CC000B /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		D4AA07202224B0FB00A17069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4AA07222224BD6200A17069 /* UITabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarVC.swift; sourceTree = "<group>"; };
 		D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCalendar.swift; sourceTree = "<group>"; };
@@ -103,14 +105,15 @@
 		D453D0622220D7D4006E6197 /* Mood Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */,
 				D453D0912220D9AB006E6197 /* CalendarVC.swift */,
 				D453D0932220D9B9006E6197 /* TodayVC.swift */,
-				D453D0632220D7D4006E6197 /* AppDelegate.swift */,
-				D453D0672220D7D4006E6197 /* Main.storyboard */,
+				D45B45F622262E1B00CC000B /* DetailVC.swift */,
 				D4AA07222224BD6200A17069 /* UITabBarVC.swift */,
+				D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */,
+				D453D0672220D7D4006E6197 /* Main.storyboard */,
 				D453D06C2220D7D5006E6197 /* LaunchScreen.storyboard */,
 				D453D06F2220D7D5006E6197 /* Info.plist */,
+				D453D0632220D7D4006E6197 /* AppDelegate.swift */,
 				D4AA07202224B0FB00A17069 /* Assets.xcassets */,
 			);
 			path = "Mood Calendar";
@@ -270,6 +273,7 @@
 				D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */,
 				D453D0642220D7D4006E6197 /* AppDelegate.swift in Sources */,
 				D4FBFC5E2224DF2A00EE1A62 /* MonthCalendar.swift in Sources */,
+				D45B45F722262E1B00CC000B /* DetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

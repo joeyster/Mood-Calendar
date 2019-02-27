@@ -5,34 +5,30 @@ class UITabBarVC: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTodayIcon()
+    }
         
+    func setTodayIcon(){
         let weekday = NSCalendar.current.component(.weekday, from: Date())
+        var pic = ""
         switch weekday{
         case 1:
-            print("Sunday")
-            self.tabBar.items?[1].image = UIImage(named: "sun.png")
+            pic = "sun.png"
         case 2:
-            print("Monday")
-            self.tabBar.items?[1].image = UIImage(named: "mon.png")
+            pic = "mon.png"
         case 3:
-            print("Tuesday")
-            self.tabBar.items?[1].image = UIImage(named: "tues.png")
+            pic = "tues.png"
         case 4:
-            print("Wednesday")
-            self.tabBar.items?[1].image = UIImage(named: "wednes.png")
+            pic = "wednes.png"
         case 5:
-            print("Thursday")
-            self.tabBar.items?[1].image = UIImage(named: "thurs.png")
+            pic = "thurs.png"
         case 6:
-            print("Friday")
-            self.tabBar.items?[1].image = UIImage(named: "fri.png")
+            pic = "fri.png"
         case 7:
-            print("Saturday")
-            self.tabBar.items?[1].image = UIImage(named: "satur.png")
+            pic = "satur.png"
         default:
             print("something went wrong!")
         }
+        self.tabBar.items?[1].image = UIImage(named: pic)
     }
-    
-    
 }
