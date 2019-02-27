@@ -105,4 +105,10 @@ class TodayVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "showDateInfo", sender: self)
+    }
+    
+    
 }
