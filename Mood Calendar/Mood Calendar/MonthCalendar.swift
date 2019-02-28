@@ -29,9 +29,4 @@ class MonthCalendar{
     func getColumn()-> Int{
         return dateComponents.weekday!
     }
-    
-    
-    
-    
-//        print(dateComponents.isLeapMonth!)
 }

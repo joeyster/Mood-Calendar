@@ -52,11 +52,51 @@ class TodayVC: UIViewController {
     @IBOutlet var F6: UIButton!
     
     var model = MonthCalendar()
-    var moodColor:String = ""
+    var moodColor: String = ""
+    var buttonID: Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fillCalendar()
+        print("TodayVC: " + self.moodColor)
+        print("TodayVC: " + String(self.buttonID))
+        changeMood()
+    }
+    
+    func changeMood(){
+        let buttonSetA: [UIButton] = [A0, A1, A2, A3, A4, A5, A6]
+        let buttonSetB: [UIButton] = [B0, B1, B2, B3, B4, B5, B6]
+        let buttonSetC: [UIButton] = [C0, C1, C2, C3, C4, C5, C6]
+        let buttonSetD: [UIButton] = [D0, D1, D2, D3, D4, D5, D6]
+        let buttonSetE: [UIButton] = [E0, E1, E2, E3, E4, E5, E6]
+        let buttonSetF: [UIButton] = [F0, F1, F2, F3, F4, F5, F6]
+        
+        //determine column
+        let column = self.buttonID % 7
+        if buttonID >= 0 && buttonID < 7{
+            buttonSetA[column].backgroundColor = UIColor.red
+            print("ran")
+        }
+        else if buttonID > 7  && buttonID < 14{
+            buttonSetB[column].backgroundColor = UIColor.red
+            print("ran")
+        }
+        else if buttonID > 14 && buttonID < 21{
+            buttonSetC[column].backgroundColor = UIColor.red
+            print("ran")
+        }
+        else if buttonID > 21 && buttonID < 28{
+            buttonSetD[column].backgroundColor = UIColor.red
+            print("ran")
+        }
+        else if buttonID > 28 && buttonID < 35{
+            buttonSetE[column].backgroundColor = UIColor.red
+            print("ran")
+        }
+        else if buttonID > 35 && buttonID < 42{
+            buttonSetF[column].backgroundColor = UIColor.red
+            print("ran")
+        }
     }
     
     func fillCalendar(){
@@ -108,8 +148,14 @@ class TodayVC: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "showDateInfo", sender: self)
+        performSegue(withIdentifier: "showDateInfo", sender: sender)
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDateInfo"{
+            let detailVC = segue.destination as! DetailVC
+            let sender = sender as AnyObject
+            detailVC.buttonID = sender.tag
+        }
+    }
 }
