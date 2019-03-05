@@ -2,19 +2,16 @@ import UIKit
 import Foundation
 
 class UITabBarVC: UITabBarController {
-    
-    var moodColor: String = ""
-    var buttonID: Int = -1
+    var dateInfo = DateInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTodayIcon()
-        
         //passes info to TodayVC
         let todayVC = self.viewControllers?[0] as! TodayVC
-        todayVC.moodColor = self.moodColor
-        todayVC.buttonID = self.buttonID
+        todayVC.dateInfo = self.dateInfo
     }
+    
     
     //dynamically change icon
     func setTodayIcon(){

@@ -1,7 +1,6 @@
 import UIKit
 
 class TodayVC: UIViewController {
-    
     @IBOutlet var A0: UIButton!
     @IBOutlet var A1: UIButton!
     @IBOutlet var A2: UIButton!
@@ -34,7 +33,6 @@ class TodayVC: UIViewController {
     @IBOutlet var D5: UIButton!
     @IBOutlet var D6: UIButton!
     
-    
     @IBOutlet var E0: UIButton!
     @IBOutlet var E1: UIButton!
     @IBOutlet var E2: UIButton!
@@ -51,63 +49,43 @@ class TodayVC: UIViewController {
     @IBOutlet var F5: UIButton!
     @IBOutlet var F6: UIButton!
     
-    var model = MonthCalendar()
-    var moodColor: String = ""
+    var buttonSetA: [UIButton] = []
+    var buttonSetB: [UIButton] = []
+    var buttonSetC: [UIButton] = []
+    var buttonSetD: [UIButton] = []
+    var buttonSetE: [UIButton] = []
+    var buttonSetF: [UIButton] = []
+    
+    @IBOutlet var imageView: UIImageView!
+    
+    var monthInfo = MonthCalendar()
+    var dateInfo: DateInfo?
     var buttonID: Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setMonthPicture()
+        fillButtonSets()
         fillCalendar()
-        print("TodayVC: " + self.moodColor)
-        print("TodayVC: " + String(self.buttonID))
-        changeMood()
+        clearNonEssentials()
     }
     
-    func changeMood(){
-        let buttonSetA: [UIButton] = [A0, A1, A2, A3, A4, A5, A6]
-        let buttonSetB: [UIButton] = [B0, B1, B2, B3, B4, B5, B6]
-        let buttonSetC: [UIButton] = [C0, C1, C2, C3, C4, C5, C6]
-        let buttonSetD: [UIButton] = [D0, D1, D2, D3, D4, D5, D6]
-        let buttonSetE: [UIButton] = [E0, E1, E2, E3, E4, E5, E6]
-        let buttonSetF: [UIButton] = [F0, F1, F2, F3, F4, F5, F6]
-        
-        //determine column
-        let column = self.buttonID % 7
-        if buttonID >= 0 && buttonID < 7{
-            buttonSetA[column].backgroundColor = UIColor.red
-            print("ran")
-        }
-        else if buttonID > 7  && buttonID < 14{
-            buttonSetB[column].backgroundColor = UIColor.red
-            print("ran")
-        }
-        else if buttonID > 14 && buttonID < 21{
-            buttonSetC[column].backgroundColor = UIColor.red
-            print("ran")
-        }
-        else if buttonID > 21 && buttonID < 28{
-            buttonSetD[column].backgroundColor = UIColor.red
-            print("ran")
-        }
-        else if buttonID > 28 && buttonID < 35{
-            buttonSetE[column].backgroundColor = UIColor.red
-            print("ran")
-        }
-        else if buttonID > 35 && buttonID < 42{
-            buttonSetF[column].backgroundColor = UIColor.red
-            print("ran")
-        }
+    func setMonthPicture(){
+        imageView.image = UIImage(named: "march.jpg")
+    }
+    
+    func fillButtonSets(){
+        self.buttonSetA = [A0, A1, A2, A3, A4, A5, A6]
+        self.buttonSetB = [B0, B1, B2, B3, B4, B5, B6]
+        self.buttonSetC = [C0, C1, C2, C3, C4, C5, C6]
+        self.buttonSetD = [D0, D1, D2, D3, D4, D5, D6]
+        self.buttonSetE = [E0, E1, E2, E3, E4, E5, E6]
+        self.buttonSetF = [F0, F1, F2, F3, F4, F5, F6]
     }
     
     func fillCalendar(){
-        let buttonSetA: [UIButton] = [A0, A1, A2, A3, A4, A5, A6]
-        let buttonSetB: [UIButton] = [B0, B1, B2, B3, B4, B5, B6]
-        let buttonSetC: [UIButton] = [C0, C1, C2, C3, C4, C5, C6]
-        let buttonSetD: [UIButton] = [D0, D1, D2, D3, D4, D5, D6]
-        let buttonSetE: [UIButton] = [E0, E1, E2, E3, E4, E5, E6]
-        let buttonSetF: [UIButton] = [F0, F1, F2, F3, F4, F5, F6]
-        
-        let startColumn = model.getColumn() - 1 //model.getColumn()--> 1-7. sunday being 1
+        //fill out the entire calendar
+        let startColumn = monthInfo.getColumn() - 1 //monthInfo.getColumn()--> 1-7. sunday being 1
         var day = 1
         for column in startColumn...6{
             buttonSetA[column].setTitle(String(day), for: .normal)
@@ -121,6 +99,35 @@ class TodayVC: UIViewController {
             buttonSetF[column].setTitle(String(day+28), for: .normal)
             day += 1
         }
+        
+        //fill color from temp "database" 
+        for id in 0...41{
+            if let moodColor = dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]![id]{
+                let column = id % 7
+                if id >= 0 && id < 7{
+                    buttonSetA[column].backgroundColor = moodColor
+                }
+                else if id >= 7  && id < 14{
+                    buttonSetB[column].backgroundColor = moodColor
+                }
+                else if id >= 14 && id < 21{
+                    buttonSetC[column].backgroundColor = moodColor
+                }
+                else if id >= 21 && id < 28{
+                    buttonSetD[column].backgroundColor = moodColor
+                }
+                else if id >= 28 && id < 35{
+                    buttonSetE[column].backgroundColor = moodColor
+                }
+                else if id >= 35 && id < 42{
+                    buttonSetF[column].backgroundColor = moodColor
+                }
+            }
+        }
+    }
+    
+    func clearNonEssentials(){
+        let startColumn = monthInfo.getColumn() - 1
         //clear non-Int buttons
         for column in 0...startColumn-1{
             buttonSetA[column].setTitle("", for: .normal)
@@ -129,20 +136,22 @@ class TodayVC: UIViewController {
         
         //clear non-essential dates
         let numOfDays: Int
-        let year = model.dateComponents.year!
-//      https://h4labs.wordpress.com/2016/01/11/isleapyear-in-swift/
+        let year = monthInfo.dateComponents.year!
+        //      https://h4labs.wordpress.com/2016/01/11/isleapyear-in-swift/
         if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
-            numOfDays = model.leapDays[model.dateComponents.month!-1]
+            numOfDays = monthInfo.leapDays[monthInfo.dateComponents.month!-1]
         }
         else{
-            numOfDays = model.monthDays[model.dateComponents.month!-1]
+            numOfDays = monthInfo.monthDays[monthInfo.dateComponents.month!-1]
         }
         for column in 0...6{
             if Int(buttonSetE[column].titleLabel!.text!)! > numOfDays{
                 buttonSetE[column].setTitle("", for: .normal)
+                buttonSetE[column].isEnabled = false
             }
             if Int(buttonSetF[column].titleLabel!.text!)! > numOfDays{
                 buttonSetF[column].setTitle("", for: .normal)
+                buttonSetF[column].isEnabled = false
             }
         }
     }
@@ -155,6 +164,7 @@ class TodayVC: UIViewController {
         if segue.identifier == "showDateInfo"{
             let detailVC = segue.destination as! DetailVC
             let sender = sender as AnyObject
+            detailVC.dateInfo = self.dateInfo
             detailVC.buttonID = sender.tag
         }
     }
