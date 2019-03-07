@@ -5,18 +5,6 @@ class UITabBarVC: UITabBarController {
     var dateInfo = DateInfo()
     var monthInfo = MonthCalendar()
     
-    // UITabBarDelegate
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        //passes info to TodayVC
-        let todayVC = self.viewControllers?[0] as! TodayVC
-        todayVC.monthInfo = MonthCalendar()
-        todayVC.dateInfo = self.dateInfo
-        todayVC.clearAllColors()
-        todayVC.fillCalendar()
-        todayVC.clearNonEssentials()
-        todayVC.setMonthPicture()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setTodayIcon()
@@ -27,8 +15,14 @@ class UITabBarVC: UITabBarController {
         //passes info to CalendarVC
         let calendarVC = self.viewControllers?[1] as! CalendarVC
         calendarVC.dateInfo = self.dateInfo
-//        print("UITabBarVC viewDidLoad")
     }
+    
+//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        //passes info to TodayVC
+//        let todayVC = self.viewControllers?[0] as! TodayVC
+//        todayVC.monthInfo = MonthCalendar()
+//        todayVC.dateInfo = self.dateInfo
+//    }
     
     //dynamically change icon
     func setTodayIcon(){

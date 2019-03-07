@@ -5,6 +5,11 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     var dateInfo: DateInfo?
     var monthInfo = MonthCalendar()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fillItemsArray()
+    }
+    
     let reuseIdentifier = "cell"
     let monthInitial: [String] = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
     var items: [String] = []
@@ -20,26 +25,18 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
        
         cell.label.text = self.items[indexPath.item]
         if let moodColor = dateInfo?.yearMonths2019[month]?[Int(self.items[indexPath.item])!]{
+            cell.label.textColor = UIColor.white
             cell.label.backgroundColor = moodColor
         }
         month = month + 1
         if month == 12{
             month = 0
         }
-        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toSpecificMonth", sender: indexPath.item)
-    }
-    
-    var model = MonthCalendar()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fillItemsArray()
-//        print("CalendarVC viewDidLoad")
     }
     
     func fillItemsArray(){

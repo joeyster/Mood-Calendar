@@ -12,8 +12,4 @@ class CalendarInfo {
             yearMonths2019[month] = monthMoods2019
         }
     }
-    
-    func printIt(){
-        print(yearMonths2019)
-    }
 }

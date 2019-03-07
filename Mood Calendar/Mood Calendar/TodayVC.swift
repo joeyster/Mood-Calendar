@@ -66,20 +66,9 @@ class TodayVC: UIViewController {
         super.viewDidLoad()
         setMonthPicture()
         fillButtonSets()
+        clearAllColors()
         fillCalendar()
         clearNonEssentials()
-//        print("TodayVC viewDidLoad")
-    }
-    
-    func clearAllColors(){
-        for column in 0...6{
-            buttonSetA[column].backgroundColor = UIColor.white
-            buttonSetB[column].backgroundColor = UIColor.white
-            buttonSetC[column].backgroundColor = UIColor.white
-            buttonSetD[column].backgroundColor = UIColor.white
-            buttonSetE[column].backgroundColor = UIColor.white
-            buttonSetF[column].backgroundColor = UIColor.white
-        }
     }
     
     func setMonthPicture(){
@@ -113,6 +102,18 @@ class TodayVC: UIViewController {
             print("something went wrong")
         }
         imageView.image = UIImage(named: monthPic)
+    }
+    
+    func clearAllColors(){
+        //whiten all background
+        for column in 0...6{
+            buttonSetA[column].backgroundColor = UIColor.white
+            buttonSetB[column].backgroundColor = UIColor.white
+            buttonSetC[column].backgroundColor = UIColor.white
+            buttonSetD[column].backgroundColor = UIColor.white
+            buttonSetE[column].backgroundColor = UIColor.white
+            buttonSetF[column].backgroundColor = UIColor.white
+        }
     }
     
     func fillButtonSets(){
@@ -183,6 +184,7 @@ class TodayVC: UIViewController {
             for column in 0...startColumn-1{
                 buttonSetA[column].setTitle("", for: .normal)
                 buttonSetA[column].isEnabled = false
+                buttonSetA[column].backgroundColor = UIColor.white
             }
         }
         

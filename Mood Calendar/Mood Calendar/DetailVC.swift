@@ -13,10 +13,10 @@ class DetailVC: UIViewController {
     var monthInfo = MonthCalendar()
     
     var dateNumber: Int = -1
-    let yellowMood = UIColor(red: 254/255, green: 255/255, blue: 134/255, alpha: 1)
+    let yellowMood = UIColor(red: 255/255, green: 235/255, blue: 46/255, alpha: 1)
     let blueMood = UIColor(red: 80/255, green: 85/255, blue: 255/255, alpha: 0.8)
     let redMood = UIColor(red: 255/255, green: 82/255, blue: 82/255, alpha: 1)
-    let greenMood = UIColor(red: 151/255, green: 255/255, blue: 132/255, alpha: 1)
+    let greenMood = UIColor(red: 105/255, green: 228/255, blue: 74/255, alpha: 1)
     let purpleMood = UIColor(red: 182/255, green: 123/255, blue: 255/255, alpha: 1)
     let whiteMood = UIColor.lightGray
     
@@ -41,7 +41,7 @@ class DetailVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "backToToday"{
             let todayVC = segue.destination as! UITabBarVC
-            if sender as AnyObject? === joyButton {
+            if sender as AnyObject? === joyButton{
                 dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = yellowMood
             }
             else if sender as AnyObject? === sadButton{
