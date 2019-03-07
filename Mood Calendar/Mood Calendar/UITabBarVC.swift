@@ -3,6 +3,7 @@ import Foundation
 
 class UITabBarVC: UITabBarController {
     var dateInfo = DateInfo()
+    var monthInfo = MonthCalendar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,9 +11,11 @@ class UITabBarVC: UITabBarController {
         //passes info to TodayVC
         let todayVC = self.viewControllers?[0] as! TodayVC
         todayVC.dateInfo = self.dateInfo
+        todayVC.monthInfo = self.monthInfo
         //passes info to CalendarVC
         let calendarVC = self.viewControllers?[1] as! CalendarVC
         calendarVC.dateInfo = self.dateInfo
+        dateInfo.printIt()
     }
     
     

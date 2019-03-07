@@ -11,6 +11,7 @@ class DetailVC: UIViewController {
     
     var dateInfo: DateInfo?
     var monthInfo = MonthCalendar()
+    
     var dateNumber: Int = -1
     let yellowMood = UIColor(red: 254/255, green: 255/255, blue: 134/255, alpha: 1)
     let blueMood = UIColor(red: 80/255, green: 85/255, blue: 255/255, alpha: 0.8)
@@ -59,6 +60,7 @@ class DetailVC: UIViewController {
                 dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = UIColor.white
             }
             todayVC.dateInfo = self.dateInfo!
+            todayVC.monthInfo = self.monthInfo
         }
     }
 }

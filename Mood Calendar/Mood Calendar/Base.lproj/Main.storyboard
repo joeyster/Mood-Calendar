@@ -733,9 +733,9 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DD9-G0-chc">
-                                <rect key="frame" x="8" y="120" width="398" height="183"/>
+                                <rect key="frame" x="8" y="120" width="398" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="MNp-9y-Zsv"/>
+                                    <constraint firstAttribute="height" constant="160" id="MNp-9y-Zsv"/>
                                     <constraint firstAttribute="width" constant="398" id="eZT-Ac-pD2"/>
                                 </constraints>
                             </imageView>
@@ -1194,6 +1194,9 @@
                         <viewLayoutGuide key="safeArea" id="6e4-Ab-FTX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="kFK-81-FaS"/>
+                    <connections>
+                        <segue destination="PFR-WW-CK1" kind="show" identifier="toSpecificMonth" id="Ix8-sU-f9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Naf-X3-GgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1222,4 +1225,7 @@
         <image name="calendar" width="24" height="24"/>
         <image name="logo" width="925.67999267578125" height="199.44000244140625"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ix8-sU-f9s"/>
+    </inferredMetricsTieBreakers>
 </document>

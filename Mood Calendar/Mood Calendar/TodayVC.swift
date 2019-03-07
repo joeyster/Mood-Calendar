@@ -69,10 +69,40 @@ class TodayVC: UIViewController {
         fillCalendar()
         clearNonEssentials()
 //        dateInfo!.printIt()
+        print(monthInfo.dateComponents.month!)
     }
     
     func setMonthPicture(){
-        imageView.image = UIImage(named: "march.jpg")
+        var monthPic = ""
+        switch monthInfo.dateComponents.month!{
+        case 1:
+            monthPic = "January.jpg"
+        case 2:
+            monthPic = "February.jpg"
+        case 3:
+            monthPic = "March.jpg"
+        case 4:
+            monthPic = "April.jpg"
+        case 5:
+            monthPic = "May.jpg"
+        case 6:
+            monthPic = "June.jpg"
+        case 7:
+            monthPic = "July.jpg"
+        case 8:
+            monthPic = "August.jpg"
+        case 9:
+            monthPic = "September.jpg"
+        case 10:
+            monthPic = "October.jpg"
+        case 11:
+            monthPic = "November.jpg"
+        case 12:
+            monthPic = "December.jpg"
+        default:
+            print("something went wrong")
+        }
+        imageView.image = UIImage(named: monthPic)
     }
     
     func fillButtonSets(){
@@ -110,11 +140,6 @@ class TodayVC: UIViewController {
         else{
             numOfDays = monthInfo.monthDays[monthInfo.dateComponents.month!-1]
         }
-//        for date in 1...numOfDays{
-//            if let moodColor = dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]![date]{
-//
-//            }
-//        }
         for date in 1...numOfDays{
             for column in 0...6{
                 if let moodColor = dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]![date]{
@@ -144,9 +169,11 @@ class TodayVC: UIViewController {
     func clearNonEssentials(){
         let startColumn = monthInfo.getColumn() - 1
         //clear non-Int buttons
-        for column in 0...startColumn-1{
-            buttonSetA[column].setTitle("", for: .normal)
-            buttonSetA[column].isEnabled = false
+        if startColumn != 0{
+            for column in 0...startColumn-1{
+                buttonSetA[column].setTitle("", for: .normal)
+                buttonSetA[column].isEnabled = false
+            }
         }
         
         //clear non-essential dates
@@ -180,7 +207,7 @@ class TodayVC: UIViewController {
             let detailVC = segue.destination as! DetailVC
             let sender = sender as AnyObject
             detailVC.dateInfo = self.dateInfo
-//            detailVC.buttonID = sender.tag
+            detailVC.monthInfo = self.monthInfo
             if let buttonTitle = sender.title(for: .normal){
                 detailVC.dateNumber = Int(buttonTitle)!
             }

@@ -3,6 +3,7 @@ import UIKit
 class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var dateInfo: DateInfo?
+    var monthInfo = MonthCalendar()
     
     let reuseIdentifier = "cell"
     let monthInitial: [String] = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
@@ -30,36 +31,7 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("You selected cell #\(indexPath.item)!")
-        let month = (indexPath.item % 12) + 1
-        switch Int(month){
-            case 1:
-                print("Jan")
-            case 2:
-                print("Feb")
-            case 3:
-                print("Mar")
-            case 4:
-                print("Apr")
-            case 5:
-                print("May")
-            case 6:
-                print("June")
-            case 7:
-                print("July")
-            case 8:
-                print("Aug")
-            case 9:
-                print("Sept")
-            case 10:
-                print("Oct")
-            case 11:
-                print("Nov")
-            case 12:
-                print("Dec")
-            default:
-                print("something went wrong")
-        }
+        performSegue(withIdentifier: "toSpecificMonth", sender: indexPath.item)
     }
     
     var model = MonthCalendar()
@@ -75,5 +47,39 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
                 items.append(String(days))
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let month = (sender as! Int % 12) + 1
+        let todayVC = segue.destination as! UITabBarVC
+        switch Int(month){
+            case 1:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/01/01")
+            case 2:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/02/01")
+            case 3:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/03/01")
+            case 4:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/04/01")
+            case 5:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/05/01")
+            case 6:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/06/01")
+            case 7:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/07/01")
+            case 8:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/08/01")
+            case 9:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/09/01")
+            case 10:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/10/01")
+            case 11:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/11/01")
+            case 12:
+                todayVC.monthInfo = MonthCalendar(specificDate: "2019/12/01")
+            default:
+                print("something went wrong")
+        }
+        todayVC.dateInfo = self.dateInfo!
     }
 }
