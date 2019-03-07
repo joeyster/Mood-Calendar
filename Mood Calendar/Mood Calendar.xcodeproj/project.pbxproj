@@ -19,6 +19,8 @@
 		D48FDEEF222E593C0048C7C6 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDEEE222E593C0048C7C6 /* UIButtonExtension.swift */; };
 		D4AA07212224B0FB00A17069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4AA07202224B0FB00A17069 /* Assets.xcassets */; };
 		D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA07222224BD6200A17069 /* UITabBarVC.swift */; };
+		D4B6EECD222F99AE00A1650C /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6EECC222F99AE00A1650C /* MyCollectionViewCell.swift */; };
+		D4B6EECF222FAE3700A1650C /* CalendarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6EECE222FAE3700A1650C /* CalendarInfo.swift */; };
 		D4FBFC5E2224DF2A00EE1A62 /* MonthCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		D48FDEEE222E593C0048C7C6 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		D4AA07202224B0FB00A17069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4AA07222224BD6200A17069 /* UITabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarVC.swift; sourceTree = "<group>"; };
+		D4B6EECC222F99AE00A1650C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		D4B6EECE222FAE3700A1650C /* CalendarInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarInfo.swift; sourceTree = "<group>"; };
 		D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCalendar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,11 +114,13 @@
 			isa = PBXGroup;
 			children = (
 				D4AA07222224BD6200A17069 /* UITabBarVC.swift */,
-				D453D0932220D9B9006E6197 /* TodayVC.swift */,
 				D453D0912220D9AB006E6197 /* CalendarVC.swift */,
+				D453D0932220D9B9006E6197 /* TodayVC.swift */,
 				D45B45F622262E1B00CC000B /* DetailVC.swift */,
 				D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */,
 				D4083A362227DBF0003BA5CB /* DateInfo.swift */,
+				D4B6EECE222FAE3700A1650C /* CalendarInfo.swift */,
+				D4B6EECC222F99AE00A1650C /* MyCollectionViewCell.swift */,
 				D48FDEEE222E593C0048C7C6 /* UIButtonExtension.swift */,
 				D453D0672220D7D4006E6197 /* Main.storyboard */,
 				D453D06C2220D7D5006E6197 /* LaunchScreen.storyboard */,
@@ -275,7 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D453D0942220D9B9006E6197 /* TodayVC.swift in Sources */,
+				D4B6EECF222FAE3700A1650C /* CalendarInfo.swift in Sources */,
 				D48FDEEF222E593C0048C7C6 /* UIButtonExtension.swift in Sources */,
+				D4B6EECD222F99AE00A1650C /* MyCollectionViewCell.swift in Sources */,
 				D453D0922220D9AB006E6197 /* CalendarVC.swift in Sources */,
 				D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */,
 				D4083A372227DBF0003BA5CB /* DateInfo.swift in Sources */,

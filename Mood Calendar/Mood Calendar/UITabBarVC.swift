@@ -10,6 +10,9 @@ class UITabBarVC: UITabBarController {
         //passes info to TodayVC
         let todayVC = self.viewControllers?[0] as! TodayVC
         todayVC.dateInfo = self.dateInfo
+        //passes info to CalendarVC
+        let calendarVC = self.viewControllers?[1] as! CalendarVC
+        calendarVC.dateInfo = self.dateInfo
     }
     
     

@@ -1,6 +1,6 @@
 import UIKit
 
-class DateInfo {
+class CalendarInfo {
     var yearMonths2019: [Int: [Int: UIColor?]] = [:]
     var monthMoods2019: [Int: UIColor?] = [:]
     

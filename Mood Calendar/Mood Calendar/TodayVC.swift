@@ -60,7 +60,7 @@ class TodayVC: UIViewController {
     
     var monthInfo = MonthCalendar()
     var dateInfo: DateInfo?
-    var buttonID: Int = -1
+    var dateNumber: Int = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +68,7 @@ class TodayVC: UIViewController {
         fillButtonSets()
         fillCalendar()
         clearNonEssentials()
+//        dateInfo!.printIt()
     }
     
     func setMonthPicture(){
@@ -99,28 +100,42 @@ class TodayVC: UIViewController {
             buttonSetF[column].setTitle(String(day+28), for: .normal)
             day += 1
         }
-        
-        //fill color from temp "database" 
-        for id in 0...41{
-            if let moodColor = dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]![id]{
-                let column = id % 7
-                if id >= 0 && id < 7{
-                    buttonSetA[column].backgroundColor = moodColor
-                }
-                else if id >= 7  && id < 14{
-                    buttonSetB[column].backgroundColor = moodColor
-                }
-                else if id >= 14 && id < 21{
-                    buttonSetC[column].backgroundColor = moodColor
-                }
-                else if id >= 21 && id < 28{
-                    buttonSetD[column].backgroundColor = moodColor
-                }
-                else if id >= 28 && id < 35{
-                    buttonSetE[column].backgroundColor = moodColor
-                }
-                else if id >= 35 && id < 42{
-                    buttonSetF[column].backgroundColor = moodColor
+        //fill color from temp "database"
+        let numOfDays: Int
+        let year = monthInfo.dateComponents.year!
+        //      https://h4labs.wordpress.com/2016/01/11/isleapyear-in-swift/
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
+            numOfDays = monthInfo.leapDays[monthInfo.dateComponents.month!-1]
+        }
+        else{
+            numOfDays = monthInfo.monthDays[monthInfo.dateComponents.month!-1]
+        }
+//        for date in 1...numOfDays{
+//            if let moodColor = dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]![date]{
+//
+//            }
+//        }
+        for date in 1...numOfDays{
+            for column in 0...6{
+                if let moodColor = dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]![date]{
+                    if buttonSetA[column].title(for: .normal)! == String(date){
+                        buttonSetA[column].backgroundColor = moodColor
+                    }
+                    else if buttonSetB[column].title(for: .normal)! == String(date){
+                        buttonSetB[column].backgroundColor = moodColor
+                    }
+                    else if buttonSetC[column].title(for: .normal)! == String(date){
+                        buttonSetC[column].backgroundColor = moodColor
+                    }
+                    else if buttonSetD[column].title(for: .normal)! == String(date){
+                        buttonSetD[column].backgroundColor = moodColor
+                    }
+                    else if buttonSetE[column].title(for: .normal)! == String(date){
+                        buttonSetE[column].backgroundColor = moodColor
+                    }
+                    else if buttonSetF[column].title(for: .normal)! == String(date){
+                        buttonSetF[column].backgroundColor = moodColor
+                    }
                 }
             }
         }
@@ -165,7 +180,10 @@ class TodayVC: UIViewController {
             let detailVC = segue.destination as! DetailVC
             let sender = sender as AnyObject
             detailVC.dateInfo = self.dateInfo
-            detailVC.buttonID = sender.tag
+//            detailVC.buttonID = sender.tag
+            if let buttonTitle = sender.title(for: .normal){
+                detailVC.dateNumber = Int(buttonTitle)!
+            }
         }
     }
 }

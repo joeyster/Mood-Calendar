@@ -11,7 +11,7 @@ class DetailVC: UIViewController {
     
     var dateInfo: DateInfo?
     var monthInfo = MonthCalendar()
-    var buttonID: Int = -1
+    var dateNumber: Int = -1
     let yellowMood = UIColor(red: 254/255, green: 255/255, blue: 134/255, alpha: 1)
     let blueMood = UIColor(red: 80/255, green: 85/255, blue: 255/255, alpha: 0.8)
     let redMood = UIColor(red: 255/255, green: 82/255, blue: 82/255, alpha: 1)
@@ -41,22 +41,22 @@ class DetailVC: UIViewController {
         if segue.identifier == "backToToday"{
             let todayVC = segue.destination as! UITabBarVC
             if sender as AnyObject? === joyButton {
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.buttonID] = yellowMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = yellowMood
             }
             else if sender as AnyObject? === sadButton{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.buttonID] = blueMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = blueMood
             }
             else if sender as AnyObject? === angryButton{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.buttonID] = redMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = redMood
             }
             else if sender as AnyObject? === disgustButton{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.buttonID] = greenMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = greenMood
             }
             else if sender as AnyObject? === calmButton{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.buttonID] = purpleMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = purpleMood
             }
             else if sender as AnyObject? === clearButton{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.buttonID] = UIColor.white
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = UIColor.white
             }
             todayVC.dateInfo = self.dateInfo!
         }
