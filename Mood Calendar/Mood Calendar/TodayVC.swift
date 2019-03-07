@@ -68,8 +68,18 @@ class TodayVC: UIViewController {
         fillButtonSets()
         fillCalendar()
         clearNonEssentials()
-//        dateInfo!.printIt()
-        print(monthInfo.dateComponents.month!)
+//        print("TodayVC viewDidLoad")
+    }
+    
+    func clearAllColors(){
+        for column in 0...6{
+            buttonSetA[column].backgroundColor = UIColor.white
+            buttonSetB[column].backgroundColor = UIColor.white
+            buttonSetC[column].backgroundColor = UIColor.white
+            buttonSetD[column].backgroundColor = UIColor.white
+            buttonSetE[column].backgroundColor = UIColor.white
+            buttonSetF[column].backgroundColor = UIColor.white
+        }
     }
     
     func setMonthPicture(){

@@ -39,6 +39,7 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     override func viewDidLoad() {
         super.viewDidLoad()
         fillItemsArray()
+//        print("CalendarVC viewDidLoad")
     }
     
     func fillItemsArray(){
