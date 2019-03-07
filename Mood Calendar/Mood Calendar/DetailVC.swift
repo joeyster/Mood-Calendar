@@ -8,6 +8,13 @@ class DetailVC: UIViewController {
     @IBOutlet var calmButton: UIButton!
     @IBOutlet var clearButton: UIButton!
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var joyDescription: UIButton!
+    @IBOutlet var sadDescription: UIButton!
+    @IBOutlet var angryDescription: UIButton!
+    @IBOutlet var disgustDescription: UIButton!
+    @IBOutlet var calmDescription: UIButton!
+    @IBOutlet var clearDescription: UIButton!
+    
     
     var dateInfo: DateInfo?
     var monthInfo = MonthCalendar()
@@ -31,7 +38,7 @@ class DetailVC: UIViewController {
         angryButton.backgroundColor = redMood
         disgustButton.backgroundColor = greenMood
         calmButton.backgroundColor = purpleMood
-        clearButton.backgroundColor = whiteMood
+        clearButton.backgroundColor = nil
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -41,23 +48,29 @@ class DetailVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "backToToday"{
             let todayVC = segue.destination as! UITabBarVC
-            if sender as AnyObject? === joyButton{
+            if sender as AnyObject? === joyButton ||
+                sender as AnyObject? === joyDescription{
                 dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = yellowMood
             }
-            else if sender as AnyObject? === sadButton{
+            else if sender as AnyObject? === sadButton ||
+                sender as AnyObject? === sadDescription{
                 dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = blueMood
             }
-            else if sender as AnyObject? === angryButton{
+            else if sender as AnyObject? === angryButton ||
+                sender as AnyObject? === angryDescription{
                 dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = redMood
             }
-            else if sender as AnyObject? === disgustButton{
+            else if sender as AnyObject? === disgustButton ||
+                sender as AnyObject? === disgustDescription{
                 dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = greenMood
             }
-            else if sender as AnyObject? === calmButton{
+            else if sender as AnyObject? === calmButton ||
+                sender as AnyObject? === calmDescription{
                 dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = purpleMood
             }
-            else if sender as AnyObject? === clearButton{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = UIColor.white
+            else if sender as AnyObject? === clearButton ||
+                sender as AnyObject? === clearDescription{
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = whiteMood
             }
             todayVC.dateInfo = self.dateInfo!
             todayVC.monthInfo = self.monthInfo

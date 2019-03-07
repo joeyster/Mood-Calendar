@@ -837,13 +837,16 @@
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="R0c-Dm-Zlu"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="joy, happy, excited, proud" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9O-2K-zbF">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsw-e4-ccS">
                                                 <rect key="frame" x="60" y="0.0" width="248" height="30"/>
-                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="joy, happy, excited, proud">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="HIC-fB-szg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-0Z-Z9L">
@@ -860,13 +863,16 @@
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="XCu-uv-CoG"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sad, lonely, anxious" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RA-t5-w6I">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIT-ux-F2M">
                                                 <rect key="frame" x="60" y="0.0" width="248" height="30"/>
-                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="sad, lonely, anxious">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="u2m-Es-Foa"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Xh3-tk-MuE">
@@ -883,13 +889,16 @@
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="O9L-KA-kfJ"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="angry, frustarted, annoyed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlR-Yu-Svp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXP-5k-Rpq">
                                                 <rect key="frame" x="60" y="0.0" width="248" height="30"/>
-                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="angry, frustarted, annoyed">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="RcC-Gc-NnQ"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nml-45-uDr">
@@ -906,13 +915,16 @@
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="otZ-xg-bq7"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sick, tired, lazy, dull" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Y-cp-7Wa">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNJ-DC-lDy">
                                                 <rect key="frame" x="60" y="0.0" width="248" height="30"/>
-                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="sick, tired, lazy, dull">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="vQL-Eu-irm"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vWA-4s-fle">
@@ -929,13 +941,16 @@
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="b4S-pO-eJF"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calm, tranquil, peaceful" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKT-bz-0D6">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-CD-J9k">
                                                 <rect key="frame" x="60" y="0.0" width="248" height="30"/>
-                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="calm, tranquil, peaceful">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="gye-Op-FZq"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CR1-PX-PKQ">
@@ -952,13 +967,16 @@
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="Ref-PV-1jV"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="clear the mood" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHv-P6-ZES">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-dI-UOT">
                                                 <rect key="frame" x="60" y="0.0" width="248" height="30"/>
-                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="clear the mood">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="sSu-aX-sBC"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -991,12 +1009,18 @@
                     </view>
                     <connections>
                         <outlet property="angryButton" destination="01o-yH-wgA" id="ABQ-Lf-1ne"/>
+                        <outlet property="angryDescription" destination="VXP-5k-Rpq" id="2xu-Sn-lgq"/>
                         <outlet property="backButton" destination="Pw5-qg-lyp" id="Kxc-ZQ-QrD"/>
                         <outlet property="calmButton" destination="S58-R3-gDs" id="wGk-yU-ycr"/>
+                        <outlet property="calmDescription" destination="5Hz-CD-J9k" id="m9p-Zi-Sit"/>
                         <outlet property="clearButton" destination="ueO-AM-fQW" id="B6T-vc-UcK"/>
+                        <outlet property="clearDescription" destination="9S6-dI-UOT" id="VBq-vg-6ZH"/>
                         <outlet property="disgustButton" destination="BC9-hA-XPs" id="QIW-gy-gbS"/>
+                        <outlet property="disgustDescription" destination="rNJ-DC-lDy" id="0ui-eF-i8t"/>
                         <outlet property="joyButton" destination="D8E-Av-gkV" id="bha-WJ-Qjp"/>
+                        <outlet property="joyDescription" destination="gsw-e4-ccS" id="eqM-02-fHx"/>
                         <outlet property="sadButton" destination="oak-RC-6mc" id="trs-xd-d0x"/>
+                        <outlet property="sadDescription" destination="fIT-ux-F2M" id="aaH-7P-dnG"/>
                         <segue destination="PFR-WW-CK1" kind="show" identifier="backToToday" id="p3R-Dr-rfu"/>
                     </connections>
                 </viewController>
