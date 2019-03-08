@@ -64,11 +64,45 @@ class TodayVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setMonthPicture()
         fillButtonSets()
-        clearAllColors()
         fillCalendar()
+        setToday()
+        setMonthPicture()
         clearNonEssentials()
+    }
+    
+    func setToday(){
+        let todayDate = MonthCalendar(today: "")
+        let todayMonth = todayDate.dateComponents.month!
+        let todayDay = todayDate.dateComponents.day!
+        if todayMonth == monthInfo.dateComponents.month!{
+            for column in 0...6{
+                if buttonSetA[column].title(for: .normal)! == String(todayDay){
+                    buttonSetA[column].layer.borderWidth = 3
+                    buttonSetA[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetB[column].title(for: .normal)! == String(todayDay){
+                    buttonSetB[column].layer.borderWidth = 3
+                    buttonSetB[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetC[column].title(for: .normal)! == String(todayDay){
+                    buttonSetC[column].layer.borderWidth = 3
+                    buttonSetC[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetD[column].title(for: .normal)! == String(todayDay){
+                    buttonSetD[column].layer.borderWidth = 3
+                    buttonSetD[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetE[column].title(for: .normal)! == String(todayDay){
+                    buttonSetE[column].layer.borderWidth = 3
+                    buttonSetE[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetF[column].title(for: .normal)! == String(todayDay){
+                    buttonSetF[column].layer.borderWidth = 3
+                    buttonSetF[column].layer.borderColor = UIColor.gray.cgColor
+                }
+            }
+        }
     }
     
     func setMonthPicture(){
@@ -104,18 +138,6 @@ class TodayVC: UIViewController {
         imageView.image = UIImage(named: monthPic)
     }
     
-    func clearAllColors(){
-        //whiten all background
-        for column in 0...6{
-            buttonSetA[column].backgroundColor = UIColor.white
-            buttonSetB[column].backgroundColor = UIColor.white
-            buttonSetC[column].backgroundColor = UIColor.white
-            buttonSetD[column].backgroundColor = UIColor.white
-            buttonSetE[column].backgroundColor = UIColor.white
-            buttonSetF[column].backgroundColor = UIColor.white
-        }
-    }
-    
     func fillButtonSets(){
         self.buttonSetA = [A0, A1, A2, A3, A4, A5, A6]
         self.buttonSetB = [B0, B1, B2, B3, B4, B5, B6]
@@ -142,16 +164,16 @@ class TodayVC: UIViewController {
             day += 1
         }
         //fill color from temp "database"
-        let numOfDays: Int
-        let year = monthInfo.dateComponents.year!
-        //      https://h4labs.wordpress.com/2016/01/11/isleapyear-in-swift/
-        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
-            numOfDays = monthInfo.leapDays[monthInfo.dateComponents.month!-1]
-        }
-        else{
-            numOfDays = monthInfo.monthDays[monthInfo.dateComponents.month!-1]
-        }
-        for date in 1...numOfDays{
+//        let numOfDays: Int
+//        let year = monthInfo.dateComponents.year!
+//        //      https://h4labs.wordpress.com/2016/01/11/isleapyear-in-swift/
+//        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
+//            numOfDays = monthInfo.leapDays[monthInfo.dateComponents.month!-1]
+//        }
+//        else{
+//            numOfDays = monthInfo.monthDays[monthInfo.dateComponents.month!-1]
+//        }
+        for date in 1...31{ //go through every date because users can put moods in the future(for whatever reason)
             for column in 0...6{
                 if let moodColor = dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]![date]{
                     if buttonSetA[column].title(for: .normal)! == String(date){

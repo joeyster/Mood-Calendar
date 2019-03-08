@@ -17,12 +17,9 @@ class UITabBarVC: UITabBarController {
         calendarVC.dateInfo = self.dateInfo
     }
     
-//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        //passes info to TodayVC
-//        let todayVC = self.viewControllers?[0] as! TodayVC
-//        todayVC.monthInfo = MonthCalendar()
-//        todayVC.dateInfo = self.dateInfo
-//    }
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("pressed item")
+    }
     
     //dynamically change icon
     func setTodayIcon(){

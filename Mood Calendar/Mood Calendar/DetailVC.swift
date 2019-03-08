@@ -38,7 +38,7 @@ class DetailVC: UIViewController {
         angryButton.backgroundColor = redMood
         disgustButton.backgroundColor = greenMood
         calmButton.backgroundColor = purpleMood
-        clearButton.backgroundColor = nil
+        clearButton.backgroundColor = whiteMood
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -70,7 +70,7 @@ class DetailVC: UIViewController {
             }
             else if sender as AnyObject? === clearButton ||
                 sender as AnyObject? === clearDescription{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = whiteMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = nil
             }
             todayVC.dateInfo = self.dateInfo!
             todayVC.monthInfo = self.monthInfo

@@ -5,18 +5,19 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     var dateInfo: DateInfo?
     var monthInfo = MonthCalendar()
     
+    let reuseIdentifier = "cell"
+    let monthInitial: [String] = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
+    var items: [String] = []
+    var month: Int = 1
+    var alreadyRan: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fillItemsArray()
     }
     
-    let reuseIdentifier = "cell"
-    let monthInitial: [String] = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
-    var items: [String] = []
-    var month: Int = 1
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        return 12*31 //months * days
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
