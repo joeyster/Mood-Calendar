@@ -1,8 +1,8 @@
 import UIKit
 
 class DateInfo {
-    var yearMonths2019: [Int: [Int: UIColor?]] = [:]
-    var monthMoods2019: [Int: UIColor?] = [:]
+    var yearMonths2019: [Int: [Int: String]] = [:]
+    var monthMoods2019: [Int: String] = [:]
     
     init(){
         for day in 1...31{
@@ -11,6 +11,6 @@ class DateInfo {
         for month in 1...12{
             yearMonths2019[month] = monthMoods2019
         }
-//        UserDefaults.standard.setValue(yearMonths2019, forKey: "yearMonths2019Key")
+        
     }
 }

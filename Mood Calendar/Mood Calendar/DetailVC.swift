@@ -18,8 +18,6 @@ class DetailVC: UIViewController {
     
     var dateInfo: DateInfo?
     var monthInfo = MonthCalendar()
-//    var yearMonths2019x = UserDefaults.standard.value(forKey: "yearMonths2019")!
-
     
     var dateNumber: Int = -1
     let yellowMood = UIColor(red: 255/255, green: 235/255, blue: 46/255, alpha: 1)
@@ -52,27 +50,27 @@ class DetailVC: UIViewController {
             let todayVC = segue.destination as! UITabBarVC
             if sender as AnyObject? === joyButton ||
                 sender as AnyObject? === joyDescription{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = yellowMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = "yellow"
             }
             else if sender as AnyObject? === sadButton ||
                 sender as AnyObject? === sadDescription{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = blueMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = "blue"
             }
             else if sender as AnyObject? === angryButton ||
                 sender as AnyObject? === angryDescription{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = redMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = "red"
             }
             else if sender as AnyObject? === disgustButton ||
                 sender as AnyObject? === disgustDescription{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = greenMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = "green"
             }
             else if sender as AnyObject? === calmButton ||
                 sender as AnyObject? === calmDescription{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = purpleMood
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = "purple"
             }
             else if sender as AnyObject? === clearButton ||
                 sender as AnyObject? === clearDescription{
-                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = nil
+                dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = "nil"
             }
             todayVC.dateInfo = self.dateInfo!
             todayVC.monthInfo = self.monthInfo

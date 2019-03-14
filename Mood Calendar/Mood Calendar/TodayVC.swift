@@ -62,6 +62,12 @@ class TodayVC: UIViewController {
     var dateInfo: DateInfo?
     var dateNumber: Int = -1
     
+    let yellowMood = UIColor(red: 255/255, green: 235/255, blue: 46/255, alpha: 1)
+    let blueMood = UIColor(red: 80/255, green: 85/255, blue: 255/255, alpha: 0.8)
+    let redMood = UIColor(red: 255/255, green: 82/255, blue: 82/255, alpha: 1)
+    let greenMood = UIColor(red: 105/255, green: 228/255, blue: 74/255, alpha: 1)
+    let purpleMood = UIColor(red: 182/255, green: 123/255, blue: 255/255, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fillButtonSets()
@@ -108,32 +114,19 @@ class TodayVC: UIViewController {
     func setMonthPicture(){
         var monthPic = ""
         switch monthInfo.dateComponents.month!{
-        case 1:
-            monthPic = "January.jpg"
-        case 2:
-            monthPic = "February.jpg"
-        case 3:
-            monthPic = "March.jpg"
-        case 4:
-            monthPic = "April.jpg"
-        case 5:
-            monthPic = "May.jpg"
-        case 6:
-            monthPic = "June.jpg"
-        case 7:
-            monthPic = "July.jpg"
-        case 8:
-            monthPic = "August.jpg"
-        case 9:
-            monthPic = "September.jpg"
-        case 10:
-            monthPic = "October.jpg"
-        case 11:
-            monthPic = "November.jpg"
-        case 12:
-            monthPic = "December.jpg"
-        default:
-            print("something went wrong")
+        case 1: monthPic = "January.jpg"
+        case 2: monthPic = "February.jpg"
+        case 3: monthPic = "March.jpg"
+        case 4: monthPic = "April.jpg"
+        case 5: monthPic = "May.jpg"
+        case 6: monthPic = "June.jpg"
+        case 7: monthPic = "July.jpg"
+        case 8: monthPic = "August.jpg"
+        case 9: monthPic = "September.jpg"
+        case 10: monthPic = "October.jpg"
+        case 11: monthPic = "November.jpg"
+        case 12: monthPic = "December.jpg"
+        default: print("something went wrong in todayvc")
         }
         imageView.image = UIImage(named: monthPic)
     }
@@ -163,19 +156,20 @@ class TodayVC: UIViewController {
             buttonSetF[column].setTitle(String(day+28), for: .normal)
             day += 1
         }
-        //fill color from temp "database"
-//        let numOfDays: Int
-//        let year = monthInfo.dateComponents.year!
-//        //      https://h4labs.wordpress.com/2016/01/11/isleapyear-in-swift/
-//        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
-//            numOfDays = monthInfo.leapDays[monthInfo.dateComponents.month!-1]
-//        }
-//        else{
-//            numOfDays = monthInfo.monthDays[monthInfo.dateComponents.month!-1]
-//        }
+        //fill color from temp "database"s
         for date in 1...31{ //go through every date because users can put moods in the future(for whatever reason)
             for column in 0...6{
-                if let moodColor = dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]![date]{
+                if let color = dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]![date]{
+                    var moodColor: UIColor?
+                    switch color{
+                        case "yellow": moodColor = yellowMood
+                        case "blue": moodColor = blueMood
+                        case "red": moodColor = redMood
+                        case "green": moodColor = greenMood
+                        case "purple": moodColor = purpleMood
+                        case "nil": moodColor = UIColor.white
+                        default: print("something went wrong in todayvc")
+                    }
                     if buttonSetA[column].title(for: .normal)! == String(date){
                         buttonSetA[column].backgroundColor = moodColor
                     }
