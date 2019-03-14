@@ -9,7 +9,6 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     let monthInitial: [String] = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
     var items: [String] = []
     var month: Int = 1
-    var alreadyRan: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +40,7 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     func fillItemsArray(){
+        print("filling the array")
         for days in 1...31{
             for _ in 1...12{
                 items.append(String(days))

@@ -18,6 +18,8 @@ class DetailVC: UIViewController {
     
     var dateInfo: DateInfo?
     var monthInfo = MonthCalendar()
+//    var yearMonths2019x = UserDefaults.standard.value(forKey: "yearMonths2019")!
+
     
     var dateNumber: Int = -1
     let yellowMood = UIColor(red: 255/255, green: 235/255, blue: 46/255, alpha: 1)

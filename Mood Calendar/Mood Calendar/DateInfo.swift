@@ -11,5 +11,6 @@ class DateInfo {
         for month in 1...12{
             yearMonths2019[month] = monthMoods2019
         }
+//        UserDefaults.standard.setValue(yearMonths2019, forKey: "yearMonths2019Key")
     }
 }
