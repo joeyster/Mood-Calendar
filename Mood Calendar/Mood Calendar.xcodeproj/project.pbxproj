@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D4083A372227DBF0003BA5CB /* DateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4083A362227DBF0003BA5CB /* DateInfo.swift */; };
+		D44446D8223B7251007AE57C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44446D7223B7251007AE57C /* SettingsVC.swift */; };
 		D453D0642220D7D4006E6197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0632220D7D4006E6197 /* AppDelegate.swift */; };
 		D453D0692220D7D4006E6197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D453D0672220D7D4006E6197 /* Main.storyboard */; };
 		D453D06E2220D7D5006E6197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D453D06C2220D7D5006E6197 /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		D4083A362227DBF0003BA5CB /* DateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInfo.swift; sourceTree = "<group>"; };
+		D44446D7223B7251007AE57C /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		D453D0602220D7D4006E6197 /* Mood Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mood Calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D453D0632220D7D4006E6197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D453D0682220D7D4006E6197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D44446D1223B3318007AE57C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D453D0572220D7D4006E6197 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +104,7 @@
 				D453D0772220D7D5006E6197 /* Mood CalendarTests */,
 				D453D0822220D7D5006E6197 /* Mood CalendarUITests */,
 				D453D0612220D7D4006E6197 /* Products */,
+				D44446D1223B3318007AE57C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +125,7 @@
 				D453D0912220D9AB006E6197 /* CalendarVC.swift */,
 				D4B6EECC222F99AE00A1650C /* MyCollectionViewCell.swift */,
 				D453D0932220D9B9006E6197 /* TodayVC.swift */,
+				D44446D7223B7251007AE57C /* SettingsVC.swift */,
 				D45B45F622262E1B00CC000B /* DetailVC.swift */,
 				D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */,
 				D4083A362227DBF0003BA5CB /* DateInfo.swift */,
@@ -215,6 +226,9 @@
 					D453D05F2220D7D4006E6197 = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.AutoFillCredentialProvider = {
+								enabled = 0;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 0;
 							};
@@ -289,6 +303,7 @@
 				D48FDEEF222E593C0048C7C6 /* UIButtonExtension.swift in Sources */,
 				D4B6EECD222F99AE00A1650C /* MyCollectionViewCell.swift in Sources */,
 				D453D0922220D9AB006E6197 /* CalendarVC.swift in Sources */,
+				D44446D8223B7251007AE57C /* SettingsVC.swift in Sources */,
 				D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */,
 				D4083A372227DBF0003BA5CB /* DateInfo.swift in Sources */,
 				D453D0642220D7D4006E6197 /* AppDelegate.swift in Sources */,

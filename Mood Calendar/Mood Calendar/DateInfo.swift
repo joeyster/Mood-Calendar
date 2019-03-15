@@ -6,11 +6,10 @@ class DateInfo {
     
     init(){
         for day in 1...31{
-            monthMoods2019[day] = nil
+            monthMoods2019[day] = "nil"
         }
         for month in 1...12{
             yearMonths2019[month] = monthMoods2019
         }
-        
     }
 }

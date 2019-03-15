@@ -2,12 +2,13 @@ import UIKit
 import Foundation
 
 class UITabBarVC: UITabBarController {
-    var dateInfo = DateInfo()
+    var dateInfo : DateInfo?
     var monthInfo = MonthCalendar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTodayIcon()
+        userDefaultsHandler()
         
         //passes info to TodayVC
         let todayVC = self.viewControllers?[0] as! TodayVC
@@ -18,9 +19,27 @@ class UITabBarVC: UITabBarController {
         calendarVC.dateInfo = self.dateInfo
     }
     
-//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        print("pressed item")
-//    }
+    func userDefaultsHandler(){
+        let defaults = UserDefaults.standard
+        
+        //creates an instance for UserDefaults to save
+        for month in 1...12{
+            var temp: [String:String] = [:]
+            for (key, value) in dateInfo!.yearMonths2019[month]!{
+                temp[String(key)] = value
+            }
+            defaults.set(temp, forKey: "month" + String(month))
+        }
+        
+        //plug result back to dateinfo
+        for month in 1...12{
+            let result = UserDefaults.standard.value(forKey: "month" + String(month))
+            let dict = result! as! Dictionary<String, String>
+            for (key, value) in dict{
+                dateInfo!.yearMonths2019[month]![Int(key)!] = value
+            }
+        }
+    }
     
     //dynamically change icon
     func setTodayIcon(){

@@ -56,7 +56,6 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     func fillItemsArray(){
-        print("filling the array")
         for days in 1...31{
             for _ in 1...12{
                 items.append(String(days))

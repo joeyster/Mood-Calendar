@@ -15,6 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let dateInfo = DateInfo()
+        //plug result back to dateinfo
+        if UserDefaults.standard.value(forKey: "month1") != nil{
+            for month in 1...12{
+                let result = UserDefaults.standard.value(forKey: "month" + String(month))
+                let dict = result! as! Dictionary<String, String>
+                for (key, value) in dict{
+                    dateInfo.yearMonths2019[month]![Int(key)!] = value
+                }
+            }
+        }
+        
+        let uiTabBar = window!.rootViewController as! UITabBarVC
+        uiTabBar.dateInfo = dateInfo
         return true
     }
 
