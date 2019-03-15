@@ -67,6 +67,7 @@ class TodayVC: UIViewController {
     let redMood = UIColor(red: 255/255, green: 82/255, blue: 82/255, alpha: 1)
     let greenMood = UIColor(red: 105/255, green: 228/255, blue: 74/255, alpha: 1)
     let purpleMood = UIColor(red: 182/255, green: 123/255, blue: 255/255, alpha: 1)
+    let todayDate = MonthCalendar(today: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,8 +78,45 @@ class TodayVC: UIViewController {
         clearNonEssentials()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        
+        leftSwipe.direction = .left
+        rightSwipe.direction = .right
+        
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
+    }
+    
+    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        var month = monthInfo.dateComponents.month!
+        if (sender.direction == .left) && month != 12 {
+            month = month + 1
+            monthInfo = MonthCalendar(specificDate: "2019/0" + String(month) + "/01")
+            completeWipe()
+            setMonthPicture()
+            fillCalendar()
+            for column in 0...6{
+                print(buttonSetE[column].titleLabel!.text! + " " + buttonSetF[column].titleLabel!.text!)
+            }
+            print("-----------")
+        }
+        
+        if (sender.direction == .right) && month != 1 {
+            month = month - 1
+            monthInfo = MonthCalendar(specificDate: "2019/0" + String(month) + "/01")
+            completeWipe()
+            setMonthPicture()
+            fillCalendar()
+            for column in 0...6{
+                print(buttonSetE[column].titleLabel!.text! + " " + buttonSetF[column].titleLabel!.text!)
+            }
+            print("-----------")
+        }
+    }
+    
     func setToday(){
-        let todayDate = MonthCalendar(today: "")
         let todayMonth = todayDate.dateComponents.month!
         let todayDay = todayDate.dateComponents.day!
         if todayMonth == monthInfo.dateComponents.month!{
@@ -215,14 +253,39 @@ class TodayVC: UIViewController {
             numOfDays = monthInfo.monthDays[monthInfo.dateComponents.month!-1]
         }
         for column in 0...6{
+//            print(buttonSetE[column].titleLabel!.text! + " > " + String(numOfDays) + "?")
+//            print(buttonSetF[column].titleLabel!.text! + " > " + String(numOfDays) + "?")
             if Int(buttonSetE[column].titleLabel!.text!)! > numOfDays{
+//                print(buttonSetE[column].titleLabel!.text! + " > " + String(numOfDays))
                 buttonSetE[column].setTitle("", for: .normal)
                 buttonSetE[column].isEnabled = false
             }
             if Int(buttonSetF[column].titleLabel!.text!)! > numOfDays{
+//                print(buttonSetF[column].titleLabel!.text! + " > " + String(numOfDays))
                 buttonSetF[column].setTitle("", for: .normal)
                 buttonSetF[column].isEnabled = false
             }
+        }
+        if monthInfo.dateComponents.month! != todayDate.dateComponents.month! {
+            for column in 0...6{
+                buttonSetA[column].layer.borderWidth = 0
+                buttonSetB[column].layer.borderWidth = 0
+                buttonSetC[column].layer.borderWidth = 0
+                buttonSetD[column].layer.borderWidth = 0
+                buttonSetE[column].layer.borderWidth = 0
+                buttonSetF[column].layer.borderWidth = 0
+            }
+        }
+    }
+    
+    func completeWipe(){
+        for column in 0...6{
+            buttonSetA[column].setTitle("", for: .normal)
+            buttonSetB[column].setTitle("", for: .normal)
+            buttonSetC[column].setTitle("", for: .normal)
+            buttonSetD[column].setTitle("", for: .normal)
+            buttonSetE[column].setTitle("", for: .normal)
+            buttonSetF[column].setTitle("", for: .normal)
         }
     }
     
