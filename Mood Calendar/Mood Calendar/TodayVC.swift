@@ -94,91 +94,23 @@ class TodayVC: UIViewController {
         if (sender.direction == .left) && month != 12 {
             month = month + 1
             monthInfo = MonthCalendar(specificDate: "2019/0" + String(month) + "/01")
-            completeWipe()
-            setMonthPicture()
-            fillCalendar()
-            for column in 0...6{
-                print(buttonSetE[column].titleLabel!.text! + " " + buttonSetF[column].titleLabel!.text!)
-            }
-            print("-----------")
+            viewDidLoad()
         }
         
         if (sender.direction == .right) && month != 1 {
             month = month - 1
             monthInfo = MonthCalendar(specificDate: "2019/0" + String(month) + "/01")
-            completeWipe()
-            setMonthPicture()
-            fillCalendar()
-            for column in 0...6{
-                print(buttonSetE[column].titleLabel!.text! + " " + buttonSetF[column].titleLabel!.text!)
-            }
-            print("-----------")
+            viewDidLoad()
         }
-    }
-    
-    func setToday(){
-        let todayMonth = todayDate.dateComponents.month!
-        let todayDay = todayDate.dateComponents.day!
-        if todayMonth == monthInfo.dateComponents.month!{
-            for column in 0...6{
-                if buttonSetA[column].title(for: .normal)! == String(todayDay){
-                    buttonSetA[column].layer.borderWidth = 3
-                    buttonSetA[column].layer.borderColor = UIColor.gray.cgColor
-                }
-                else if buttonSetB[column].title(for: .normal)! == String(todayDay){
-                    buttonSetB[column].layer.borderWidth = 3
-                    buttonSetB[column].layer.borderColor = UIColor.gray.cgColor
-                }
-                else if buttonSetC[column].title(for: .normal)! == String(todayDay){
-                    buttonSetC[column].layer.borderWidth = 3
-                    buttonSetC[column].layer.borderColor = UIColor.gray.cgColor
-                }
-                else if buttonSetD[column].title(for: .normal)! == String(todayDay){
-                    buttonSetD[column].layer.borderWidth = 3
-                    buttonSetD[column].layer.borderColor = UIColor.gray.cgColor
-                }
-                else if buttonSetE[column].title(for: .normal)! == String(todayDay){
-                    buttonSetE[column].layer.borderWidth = 3
-                    buttonSetE[column].layer.borderColor = UIColor.gray.cgColor
-                }
-                else if buttonSetF[column].title(for: .normal)! == String(todayDay){
-                    buttonSetF[column].layer.borderWidth = 3
-                    buttonSetF[column].layer.borderColor = UIColor.gray.cgColor
-                }
-            }
-        }
-    }
-    
-    func setMonthPicture(){
-        var monthPic = ""
-        switch monthInfo.dateComponents.month!{
-        case 1: monthPic = "January.jpg"
-        case 2: monthPic = "February.jpg"
-        case 3: monthPic = "March.jpg"
-        case 4: monthPic = "April.jpg"
-        case 5: monthPic = "May.jpg"
-        case 6: monthPic = "June.jpg"
-        case 7: monthPic = "July.jpg"
-        case 8: monthPic = "August.jpg"
-        case 9: monthPic = "September.jpg"
-        case 10: monthPic = "October.jpg"
-        case 11: monthPic = "November.jpg"
-        case 12: monthPic = "December.jpg"
-        default: print("something went wrong in todayvc")
-        }
-        imageView.image = UIImage(named: monthPic)
-    }
-    
-    func fillButtonSets(){
-        self.buttonSetA = [A0, A1, A2, A3, A4, A5, A6]
-        self.buttonSetB = [B0, B1, B2, B3, B4, B5, B6]
-        self.buttonSetC = [C0, C1, C2, C3, C4, C5, C6]
-        self.buttonSetD = [D0, D1, D2, D3, D4, D5, D6]
-        self.buttonSetE = [E0, E1, E2, E3, E4, E5, E6]
-        self.buttonSetF = [F0, F1, F2, F3, F4, F5, F6]
     }
     
     func fillCalendar(){
+        for column in 0...6{
+            buttonSetA[column].isEnabled = true
+            buttonSetE[column].isEnabled = true
+            buttonSetF[column].isEnabled = true
+        }
+        
         //fill out the entire calendar
         let startColumn = monthInfo.getColumn() - 1 //monthInfo.getColumn()--> 1-7. sunday being 1
         var day = 1
@@ -194,6 +126,7 @@ class TodayVC: UIViewController {
             buttonSetF[column].setTitle(String(day+28), for: .normal)
             day += 1
         }
+        
         //fill color from temp "database"s
         for date in 1...31{ //go through every date because users can put moods in the future(for whatever reason)
             for column in 0...6{
@@ -253,15 +186,11 @@ class TodayVC: UIViewController {
             numOfDays = monthInfo.monthDays[monthInfo.dateComponents.month!-1]
         }
         for column in 0...6{
-//            print(buttonSetE[column].titleLabel!.text! + " > " + String(numOfDays) + "?")
-//            print(buttonSetF[column].titleLabel!.text! + " > " + String(numOfDays) + "?")
-            if Int(buttonSetE[column].titleLabel!.text!)! > numOfDays{
-//                print(buttonSetE[column].titleLabel!.text! + " > " + String(numOfDays))
+            if buttonSetE[column].titleLabel!.text! != "nil" && Int(buttonSetE[column].titleLabel!.text!)! > numOfDays{
                 buttonSetE[column].setTitle("", for: .normal)
                 buttonSetE[column].isEnabled = false
             }
-            if Int(buttonSetF[column].titleLabel!.text!)! > numOfDays{
-//                print(buttonSetF[column].titleLabel!.text! + " > " + String(numOfDays))
+            if buttonSetF[column].titleLabel!.text! != "nil" && Int(buttonSetF[column].titleLabel!.text!)! > numOfDays{
                 buttonSetF[column].setTitle("", for: .normal)
                 buttonSetF[column].isEnabled = false
             }
@@ -278,14 +207,65 @@ class TodayVC: UIViewController {
         }
     }
     
-    func completeWipe(){
-        for column in 0...6{
-            buttonSetA[column].setTitle("", for: .normal)
-            buttonSetB[column].setTitle("", for: .normal)
-            buttonSetC[column].setTitle("", for: .normal)
-            buttonSetD[column].setTitle("", for: .normal)
-            buttonSetE[column].setTitle("", for: .normal)
-            buttonSetF[column].setTitle("", for: .normal)
+    func setMonthPicture(){
+        var monthPic = ""
+        switch monthInfo.dateComponents.month!{
+        case 1: monthPic = "January.jpg"
+        case 2: monthPic = "February.jpg"
+        case 3: monthPic = "March.jpg"
+        case 4: monthPic = "April.jpg"
+        case 5: monthPic = "May.jpg"
+        case 6: monthPic = "June.jpg"
+        case 7: monthPic = "July.jpg"
+        case 8: monthPic = "August.jpg"
+        case 9: monthPic = "September.jpg"
+        case 10: monthPic = "October.jpg"
+        case 11: monthPic = "November.jpg"
+        case 12: monthPic = "December.jpg"
+        default: print("something went wrong in todayvc")
+        }
+        imageView.image = UIImage(named: monthPic)
+    }
+    
+    func fillButtonSets(){
+        self.buttonSetA = [A0, A1, A2, A3, A4, A5, A6]
+        self.buttonSetB = [B0, B1, B2, B3, B4, B5, B6]
+        self.buttonSetC = [C0, C1, C2, C3, C4, C5, C6]
+        self.buttonSetD = [D0, D1, D2, D3, D4, D5, D6]
+        self.buttonSetE = [E0, E1, E2, E3, E4, E5, E6]
+        self.buttonSetF = [F0, F1, F2, F3, F4, F5, F6]
+    }
+    
+    func setToday(){
+        let todayMonth = todayDate.dateComponents.month!
+        let todayDay = todayDate.dateComponents.day!
+        if todayMonth == monthInfo.dateComponents.month!{
+            for column in 0...6{
+                if buttonSetA[column].title(for: .normal)! == String(todayDay){
+                    buttonSetA[column].layer.borderWidth = 3
+                    buttonSetA[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetB[column].title(for: .normal)! == String(todayDay){
+                    buttonSetB[column].layer.borderWidth = 3
+                    buttonSetB[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetC[column].title(for: .normal)! == String(todayDay){
+                    buttonSetC[column].layer.borderWidth = 3
+                    buttonSetC[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetD[column].title(for: .normal)! == String(todayDay){
+                    buttonSetD[column].layer.borderWidth = 3
+                    buttonSetD[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetE[column].title(for: .normal)! == String(todayDay){
+                    buttonSetE[column].layer.borderWidth = 3
+                    buttonSetE[column].layer.borderColor = UIColor.gray.cgColor
+                }
+                else if buttonSetF[column].title(for: .normal)! == String(todayDay){
+                    buttonSetF[column].layer.borderWidth = 3
+                    buttonSetF[column].layer.borderColor = UIColor.gray.cgColor
+                }
+            }
         }
     }
     

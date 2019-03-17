@@ -12,7 +12,6 @@ class MonthCalendar{
         
         //creates Date object
         let dateString = String(today.year!) + "/" + String(today.month!) + "/01"
-//        let dateString = "2019/01/01"
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         let specificDate = formatter.date(from: dateString)
@@ -29,7 +28,6 @@ class MonthCalendar{
         
         //creates Date object
         let dateString = String(today.year!) + "/" + String(today.month!) + "/" + String(today.day!)
-        //        let dateString = "2019/01/01"
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         let specificDate = formatter.date(from: dateString)

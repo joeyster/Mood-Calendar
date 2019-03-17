@@ -19,6 +19,14 @@ class UITabBarVC: UITabBarController {
         calendarVC.dateInfo = self.dateInfo
     }
     
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        if item.tag == 0{
+            let todayVC = self.viewControllers?[0] as! TodayVC
+            todayVC.monthInfo = MonthCalendar()
+            todayVC.viewDidLoad()
+        }
+    }
+    
     func userDefaultsHandler(){
         let defaults = UserDefaults.standard
         
