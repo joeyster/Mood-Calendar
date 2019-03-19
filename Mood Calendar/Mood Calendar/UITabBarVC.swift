@@ -17,6 +17,14 @@ class UITabBarVC: UITabBarController {
         //passes info to CalendarVC
         let calendarVC = self.viewControllers?[1] as! CalendarVC
         calendarVC.dateInfo = self.dateInfo
+        
+        
+        
+        let result = UserDefaults.standard.value(forKey: "month12")
+        let dict = result! as! Dictionary<String, String>
+        for (key, value) in dict{
+            print("key: \(key) value: \(value)")
+        }
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

@@ -7,7 +7,7 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     
     let reuseIdentifier = "cell"
     let monthInitial: [String] = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
-    var items: [String] = []
+    var items: [String] = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
     var month: Int = 1
     
     let yellowMood = UIColor(red: 255/255, green: 235/255, blue: 46/255, alpha: 1)
@@ -22,32 +22,38 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12*31 //months * days
+        return 12*31+12 //months * days + month initials
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath as IndexPath) as! MyCollectionViewCell
-       
+        
         cell.label.text = self.items[indexPath.item]
-        if let color = dateInfo?.yearMonths2019[month]?[Int(self.items[indexPath.item])!]{
-            var moodColor: UIColor?
-            switch color{
-                case "yellow": moodColor = yellowMood
-                case "blue": moodColor = blueMood
-                case "red": moodColor = redMood
-                case "green": moodColor = greenMood
-                case "purple": moodColor = purpleMood
-                case "nil": moodColor = UIColor.white
-                default: print("something went wrong in calendarvc")
+        if !monthInitial.contains(self.items[indexPath.item]){
+            if let color = dateInfo?.yearMonths2019[month]?[Int(self.items[indexPath.item])!]{
+                var moodColor: UIColor?
+                switch color{
+                    case "yellow": moodColor = yellowMood
+                    case "blue": moodColor = blueMood
+                    case "red": moodColor = redMood
+                    case "green": moodColor = greenMood
+                    case "purple": moodColor = purpleMood
+                    case "nil": moodColor = UIColor.white
+                    default: print("something went wrong in calendarvc")
+                }
+                if color != "nil"{ cell.label.textColor = UIColor.white }
+                else{ cell.label.textColor = UIColor.lightGray }
+                cell.label.backgroundColor = moodColor
             }
-            if color != "nil"{ cell.label.textColor = UIColor.white }
-            else{ cell.label.textColor = UIColor.lightGray }
-            cell.label.backgroundColor = moodColor
+        }
+        else{
+            cell.label.textColor = UIColor.black
+            cell.label.font = UIFont.boldSystemFont(ofSize: 16.0)
         }
         
         month = month + 1
-        if month == 12{ month = 0 }
+        if month == 13 { month = 1 }
         return cell
     }
     
