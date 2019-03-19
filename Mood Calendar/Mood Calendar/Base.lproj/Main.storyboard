@@ -33,8 +33,9 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="lo7-P5-iyF">
-                                <rect key="frame" x="138" y="30" width="99" height="25"/>
+                                <rect key="frame" x="137.5" y="30" width="100" height="25"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="CiU-xc-3qo"/>
                                     <constraint firstAttribute="height" constant="25" id="acg-Dk-EPB"/>
                                 </constraints>
                             </imageView>
@@ -614,7 +615,6 @@
                             <constraint firstItem="jmV-aw-chY" firstAttribute="leading" secondItem="Bla-Ak-5j8" secondAttribute="leading" constant="18" id="KPg-Vh-dt4"/>
                             <constraint firstItem="RD9-rz-oG3" firstAttribute="trailing" secondItem="Bla-Ak-5j8" secondAttribute="trailing" constant="-2" id="NKc-5E-WCd"/>
                             <constraint firstItem="DD9-G0-chc" firstAttribute="leading" secondItem="Bla-Ak-5j8" secondAttribute="leading" constant="8" id="Nay-ri-EZe"/>
-                            <constraint firstItem="lo7-P5-iyF" firstAttribute="leading" secondItem="Bla-Ak-5j8" secondAttribute="leading" constant="138" id="Q9G-fW-Hjz"/>
                             <constraint firstItem="Bla-Ak-5j8" firstAttribute="bottom" secondItem="jmV-aw-chY" secondAttribute="bottom" constant="7" id="dkr-T5-b48"/>
                             <constraint firstItem="lo7-P5-iyF" firstAttribute="centerX" secondItem="DD9-G0-chc" secondAttribute="centerX" id="fWz-kf-Fcf"/>
                             <constraint firstItem="RD9-rz-oG3" firstAttribute="bottom" secondItem="Bla-Ak-5j8" secondAttribute="bottom" id="j4O-jm-zBQ"/>
@@ -963,7 +963,7 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D9d-vj-tCu">
-                                <rect key="frame" x="8" y="63" width="359" height="547"/>
+                                <rect key="frame" x="8" y="63" width="359" height="596"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="359" id="gGW-MX-dLD"/>
@@ -1056,7 +1056,7 @@
         <image name="settings" width="7.1999998092651367" height="7.1999998092651367"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ix8-sU-f9s"/>
-        <segue reference="uCl-eK-JJi"/>
+        <segue reference="p3R-Dr-rfu"/>
+        <segue reference="yaz-29-vfK"/>
     </inferredMetricsTieBreakers>
 </document>
