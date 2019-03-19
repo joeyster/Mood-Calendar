@@ -1,6 +1,5 @@
 //source:
 //https://stackoverflow.com/questions/31735228/how-to-make-a-simple-collection-view-with-swift
-
 import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {

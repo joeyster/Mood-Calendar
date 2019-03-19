@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D4083A372227DBF0003BA5CB /* DateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4083A362227DBF0003BA5CB /* DateInfo.swift */; };
+		D42C45C72240A74E00124DA1 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C45C62240A74E00124DA1 /* MyCollectionViewCell.swift */; };
 		D44446D8223B7251007AE57C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44446D7223B7251007AE57C /* SettingsVC.swift */; };
 		D4483EB5223E150F004CDEF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4483EB4223E150F004CDEF6 /* Assets.xcassets */; };
 		D453D0642220D7D4006E6197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453D0632220D7D4006E6197 /* AppDelegate.swift */; };
@@ -20,7 +21,6 @@
 		D45B45F722262E1B00CC000B /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B45F622262E1B00CC000B /* DetailVC.swift */; };
 		D48FDEEF222E593C0048C7C6 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDEEE222E593C0048C7C6 /* UIButtonExtension.swift */; };
 		D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA07222224BD6200A17069 /* UITabBarVC.swift */; };
-		D4B6EECD222F99AE00A1650C /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B6EECC222F99AE00A1650C /* MyCollectionViewCell.swift */; };
 		D4FBFC5E2224DF2A00EE1A62 /* MonthCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		D4083A362227DBF0003BA5CB /* DateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInfo.swift; sourceTree = "<group>"; };
+		D42C45C62240A74E00124DA1 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		D44446D7223B7251007AE57C /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		D4483EB4223E150F004CDEF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4483EB6223E1EBC004CDEF6 /* Mood Calendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mood Calendar.entitlements"; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		D45B45F622262E1B00CC000B /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		D48FDEEE222E593C0048C7C6 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		D4AA07222224BD6200A17069 /* UITabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarVC.swift; sourceTree = "<group>"; };
-		D4B6EECC222F99AE00A1650C /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCalendar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +125,7 @@
 				D4483EB6223E1EBC004CDEF6 /* Mood Calendar.entitlements */,
 				D4AA07222224BD6200A17069 /* UITabBarVC.swift */,
 				D453D0912220D9AB006E6197 /* CalendarVC.swift */,
-				D4B6EECC222F99AE00A1650C /* MyCollectionViewCell.swift */,
+				D42C45C62240A74E00124DA1 /* MyCollectionViewCell.swift */,
 				D453D0932220D9B9006E6197 /* TodayVC.swift */,
 				D44446D7223B7251007AE57C /* SettingsVC.swift */,
 				D45B45F622262E1B00CC000B /* DetailVC.swift */,
@@ -306,11 +306,11 @@
 			files = (
 				D453D0942220D9B9006E6197 /* TodayVC.swift in Sources */,
 				D48FDEEF222E593C0048C7C6 /* UIButtonExtension.swift in Sources */,
-				D4B6EECD222F99AE00A1650C /* MyCollectionViewCell.swift in Sources */,
 				D453D0922220D9AB006E6197 /* CalendarVC.swift in Sources */,
 				D44446D8223B7251007AE57C /* SettingsVC.swift in Sources */,
 				D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */,
 				D4083A372227DBF0003BA5CB /* DateInfo.swift in Sources */,
+				D42C45C72240A74E00124DA1 /* MyCollectionViewCell.swift in Sources */,
 				D453D0642220D7D4006E6197 /* AppDelegate.swift in Sources */,
 				D4FBFC5E2224DF2A00EE1A62 /* MonthCalendar.swift in Sources */,
 				D45B45F722262E1B00CC000B /* DetailVC.swift in Sources */,
