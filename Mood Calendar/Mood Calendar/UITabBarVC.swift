@@ -20,11 +20,11 @@ class UITabBarVC: UITabBarController {
         
         
         
-        let result = UserDefaults.standard.value(forKey: "month12")
-        let dict = result! as! Dictionary<String, String>
-        for (key, value) in dict{
-            print("key: \(key) value: \(value)")
-        }
+        //let result = UserDefaults.standard.value(forKey: "month12")
+        //let dict = result! as! Dictionary<String, String>
+        //for (key, value) in dict{
+        //    print("key: \(key) value: \(value)")
+        //}
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

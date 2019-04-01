@@ -30,7 +30,7 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
                                                       for: indexPath as IndexPath) as! MyCollectionViewCell
         
         cell.label.text = self.items[indexPath.item]
-        if !monthInitial.contains(self.items[indexPath.item]){
+        if !monthInitial.contains(self.items[indexPath.item]) && self.items[indexPath.item] != " "{
             if let color = dateInfo?.yearMonths2019[month]?[Int(self.items[indexPath.item])!]{
                 var moodColor: UIColor?
                 switch color{
@@ -62,9 +62,23 @@ class CalendarVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     func fillItemsArray(){
+        let year = monthInfo.dateComponents.year!
+        var daysArray: [Int] = []
+        //      https://h4labs.wordpress.com/2016/01/11/isleapyear-in-swift/
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
+            daysArray = monthInfo.leapDays
+        }
+        else{
+            daysArray = monthInfo.monthDays
+        }
         for days in 1...31{
-            for _ in 1...12{
-                items.append(String(days))
+            for month in 1...12{
+                if days > daysArray[month - 1]{
+                    items.append(" ")
+                }
+                else{
+                    items.append(String(days))
+                }
             }
         }
     }
