@@ -227,6 +227,7 @@
 				TargetAttributes = {
 					D453D05F2220D7D4006E6197 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.AutoFillCredentialProvider = {
 								enabled = 0;
@@ -244,10 +245,12 @@
 					};
 					D453D0732220D7D5006E6197 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = D453D05F2220D7D4006E6197;
 					};
 					D453D07E2220D7D5006E6197 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = D453D05F2220D7D4006E6197;
 					};
 				};
@@ -500,7 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SQOD.Moody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -521,7 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SQOD.Moody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -541,7 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-CalendarTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mood Calendar.app/Mood Calendar";
 			};
@@ -562,7 +565,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-CalendarTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mood Calendar.app/Mood Calendar";
 			};
@@ -582,7 +585,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-CalendarUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Mood Calendar";
 			};
@@ -602,7 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SQOD.Mood-CalendarUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Mood Calendar";
 			};

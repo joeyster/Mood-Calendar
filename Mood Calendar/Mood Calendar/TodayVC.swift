@@ -62,11 +62,11 @@ class TodayVC: UIViewController {
     var dateInfo: DateInfo?
     var dateNumber: Int = -1
     
-    let yellowMood = UIColor(red: 255/255, green: 235/255, blue: 46/255, alpha: 1)
-    let blueMood = UIColor(red: 80/255, green: 85/255, blue: 255/255, alpha: 0.8)
-    let redMood = UIColor(red: 255/255, green: 82/255, blue: 82/255, alpha: 1)
-    let greenMood = UIColor(red: 105/255, green: 228/255, blue: 74/255, alpha: 1)
-    let purpleMood = UIColor(red: 182/255, green: 123/255, blue: 255/255, alpha: 1)
+    let yellowMood = UIColor(red: 255/255, green: 243/255, blue: 159/255, alpha: 1)
+    let blueMood = UIColor(red: 140/255, green: 140/255, blue: 237/255, alpha: 1)
+    let redMood = UIColor(red: 255/255, green: 105/255, blue: 105/255, alpha: 1)
+    let greenMood = UIColor(red: 141/255, green: 255/255, blue: 152/255, alpha: 1)
+    let purpleMood = UIColor(red: 199/255, green: 151/255, blue: 255/255, alpha: 1)
     let todayDate = MonthCalendar(today: "")
     
     override func viewDidLoad() {
@@ -107,8 +107,11 @@ class TodayVC: UIViewController {
     func fillCalendar(){
         for column in 0...6{
             buttonSetA[column].isEnabled = true
+            buttonSetA[column].backgroundColor = UIColor.white
             buttonSetE[column].isEnabled = true
+            buttonSetE[column].backgroundColor = UIColor.white
             buttonSetF[column].isEnabled = true
+            buttonSetF[column].backgroundColor = UIColor.white
         }
         
         //fill out the entire calendar
