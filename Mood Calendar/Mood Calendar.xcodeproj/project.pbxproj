@@ -21,6 +21,8 @@
 		D45B45F722262E1B00CC000B /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B45F622262E1B00CC000B /* DetailVC.swift */; };
 		D48FDEEF222E593C0048C7C6 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48FDEEE222E593C0048C7C6 /* UIButtonExtension.swift */; };
 		D4AA07232224BD6200A17069 /* UITabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AA07222224BD6200A17069 /* UITabBarVC.swift */; };
+		D4BC1EB822530D280061D342 /* DK Midnight Chalker.otf in Resources */ = {isa = PBXBuildFile; fileRef = D4BC1EB722530D280061D342 /* DK Midnight Chalker.otf */; };
+		D4BC1EBB2253257C0061D342 /* NotesInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BC1EBA2253257C0061D342 /* NotesInfo.swift */; };
 		D4FBFC5E2224DF2A00EE1A62 /* MonthCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		D45B45F622262E1B00CC000B /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		D48FDEEE222E593C0048C7C6 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		D4AA07222224BD6200A17069 /* UITabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarVC.swift; sourceTree = "<group>"; };
+		D4BC1EB722530D280061D342 /* DK Midnight Chalker.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Midnight Chalker.otf"; sourceTree = "<group>"; };
+		D4BC1EBA2253257C0061D342 /* NotesInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesInfo.swift; sourceTree = "<group>"; };
 		D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCalendar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,15 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				D4483EB6223E1EBC004CDEF6 /* Mood Calendar.entitlements */,
-				D4AA07222224BD6200A17069 /* UITabBarVC.swift */,
-				D453D0912220D9AB006E6197 /* CalendarVC.swift */,
-				D42C45C62240A74E00124DA1 /* MyCollectionViewCell.swift */,
-				D453D0932220D9B9006E6197 /* TodayVC.swift */,
-				D44446D7223B7251007AE57C /* SettingsVC.swift */,
-				D45B45F622262E1B00CC000B /* DetailVC.swift */,
-				D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */,
-				D4083A362227DBF0003BA5CB /* DateInfo.swift */,
+				D4BC1EB522530A900061D342 /* view controllers */,
+				D4BC1EB622530AB90061D342 /* models */,
+				D4BC1EB922530D2C0061D342 /* fonts */,
 				D48FDEEE222E593C0048C7C6 /* UIButtonExtension.swift */,
+				D42C45C62240A74E00124DA1 /* MyCollectionViewCell.swift */,
 				D453D0672220D7D4006E6197 /* Main.storyboard */,
 				D453D06C2220D7D5006E6197 /* LaunchScreen.storyboard */,
 				D453D06F2220D7D5006E6197 /* Info.plist */,
@@ -157,6 +157,36 @@
 				D453D0852220D7D5006E6197 /* Info.plist */,
 			);
 			path = "Mood CalendarUITests";
+			sourceTree = "<group>";
+		};
+		D4BC1EB522530A900061D342 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4AA07222224BD6200A17069 /* UITabBarVC.swift */,
+				D453D0912220D9AB006E6197 /* CalendarVC.swift */,
+				D453D0932220D9B9006E6197 /* TodayVC.swift */,
+				D44446D7223B7251007AE57C /* SettingsVC.swift */,
+				D45B45F622262E1B00CC000B /* DetailVC.swift */,
+			);
+			path = "view controllers";
+			sourceTree = "<group>";
+		};
+		D4BC1EB622530AB90061D342 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D4FBFC5D2224DF2A00EE1A62 /* MonthCalendar.swift */,
+				D4083A362227DBF0003BA5CB /* DateInfo.swift */,
+				D4BC1EBA2253257C0061D342 /* NotesInfo.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		D4BC1EB922530D2C0061D342 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D4BC1EB722530D280061D342 /* DK Midnight Chalker.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +313,7 @@
 				D453D06E2220D7D5006E6197 /* LaunchScreen.storyboard in Resources */,
 				D4483EB5223E150F004CDEF6 /* Assets.xcassets in Resources */,
 				D453D0692220D7D4006E6197 /* Main.storyboard in Resources */,
+				D4BC1EB822530D280061D342 /* DK Midnight Chalker.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +346,7 @@
 				D4083A372227DBF0003BA5CB /* DateInfo.swift in Sources */,
 				D42C45C72240A74E00124DA1 /* MyCollectionViewCell.swift in Sources */,
 				D453D0642220D7D4006E6197 /* AppDelegate.swift in Sources */,
+				D4BC1EBB2253257C0061D342 /* NotesInfo.swift in Sources */,
 				D4FBFC5E2224DF2A00EE1A62 /* MonthCalendar.swift in Sources */,
 				D45B45F722262E1B00CC000B /* DetailVC.swift in Sources */,
 			);

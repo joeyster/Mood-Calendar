@@ -10,6 +10,11 @@
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="DK Midnight Chalker.otf">
+            <string>DKMidnightChalker-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Today-->
         <scene sceneID="3rb-D5-vOm">
@@ -687,12 +692,13 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="How are you feeling background" translatesAutoresizingMaskIntoConstraints="NO" id="o6b-SN-OJS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Fbw-lv-6Uu">
-                                <rect key="frame" x="53" y="155.5" width="286" height="210"/>
+                                <rect key="frame" x="53" y="350" width="269" height="210"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-hq-2dN">
-                                        <rect key="frame" x="0.0" y="0.0" width="286" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ofs-hq-2dN">
+                                        <rect key="frame" x="0.0" y="0.0" width="269" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8E-Av-gkV">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -706,10 +712,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsw-e4-ccS">
-                                                <rect key="frame" x="60" y="0.0" width="226" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="50" y="0.0" width="219" height="30"/>
+                                                <fontDescription key="fontDescription" name="DKMidnightChalker-Regular" family="DK Midnight Chalker" pointSize="28"/>
                                                 <state key="normal" title="joy, happy, excited, proud">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.78431372549019607" green="0.6705882352941176" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="HIC-fB-szg"/>
@@ -717,8 +723,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-0Z-Z9L">
-                                        <rect key="frame" x="0.0" y="36" width="286" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-0Z-Z9L">
+                                        <rect key="frame" x="0.0" y="36" width="269" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oak-RC-6mc">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -732,10 +738,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIT-ux-F2M">
-                                                <rect key="frame" x="60" y="0.0" width="226" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="50" y="0.0" width="219" height="30"/>
+                                                <fontDescription key="fontDescription" name="DKMidnightChalker-Regular" family="DK Midnight Chalker" pointSize="28"/>
                                                 <state key="normal" title="sad, lonely, anxious">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.78431372549019607" green="0.6705882352941176" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="u2m-Es-Foa"/>
@@ -743,8 +749,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Xh3-tk-MuE">
-                                        <rect key="frame" x="0.0" y="72" width="286" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xh3-tk-MuE">
+                                        <rect key="frame" x="0.0" y="72" width="269" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01o-yH-wgA">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -758,10 +764,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXP-5k-Rpq">
-                                                <rect key="frame" x="60" y="0.0" width="226" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="50" y="0.0" width="219" height="30"/>
+                                                <fontDescription key="fontDescription" name="DKMidnightChalker-Regular" family="DK Midnight Chalker" pointSize="28"/>
                                                 <state key="normal" title="angry, frustrated, annoyed">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.78431372549019607" green="0.6705882352941176" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="RcC-Gc-NnQ"/>
@@ -769,8 +775,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nml-45-uDr">
-                                        <rect key="frame" x="0.0" y="108" width="286" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nml-45-uDr">
+                                        <rect key="frame" x="0.0" y="108" width="269" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BC9-hA-XPs">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -784,10 +790,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNJ-DC-lDy">
-                                                <rect key="frame" x="60" y="0.0" width="226" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="50" y="0.0" width="219" height="30"/>
+                                                <fontDescription key="fontDescription" name="DKMidnightChalker-Regular" family="DK Midnight Chalker" pointSize="28"/>
                                                 <state key="normal" title="sick, tired, lazy, dull">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.78431372549019607" green="0.6705882352941176" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="vQL-Eu-irm"/>
@@ -795,8 +801,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vWA-4s-fle">
-                                        <rect key="frame" x="0.0" y="144" width="286" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vWA-4s-fle">
+                                        <rect key="frame" x="0.0" y="144" width="269" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S58-R3-gDs">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -810,10 +816,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hz-CD-J9k">
-                                                <rect key="frame" x="60" y="0.0" width="226" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="50" y="0.0" width="219" height="30"/>
+                                                <fontDescription key="fontDescription" name="DKMidnightChalker-Regular" family="DK Midnight Chalker" pointSize="28"/>
                                                 <state key="normal" title="calm, tranquil, peaceful">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.78431372549019607" green="0.6705882352941176" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="gye-Op-FZq"/>
@@ -821,8 +827,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CR1-PX-PKQ">
-                                        <rect key="frame" x="0.0" y="180" width="286" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CR1-PX-PKQ">
+                                        <rect key="frame" x="0.0" y="180" width="269" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueO-AM-fQW">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -836,10 +842,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S6-dI-UOT">
-                                                <rect key="frame" x="60" y="0.0" width="226" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <rect key="frame" x="50" y="0.0" width="219" height="30"/>
+                                                <fontDescription key="fontDescription" name="DKMidnightChalker-Regular" family="DK Midnight Chalker" pointSize="28"/>
                                                 <state key="normal" title="clear the mood">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.78431372549019607" green="0.6705882352941176" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="sSu-aX-sBC"/>
@@ -856,20 +862,55 @@
                                     <action selector="buttonPressed:" destination="kXb-PT-9Xa" eventType="touchUpInside" id="7US-fd-tnj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW ARE YOU FEELING?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIF-eH-toT">
+                                <rect key="frame" x="53.5" y="93" width="268.5" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="6KG-Fp-yt0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DKMidnightChalker-Regular" family="DK Midnight Chalker" pointSize="41"/>
+                                <color key="textColor" red="0.7843137255" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOTES:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6M-A8-c11">
+                                <rect key="frame" x="27" y="141" width="320" height="20"/>
+                                <fontDescription key="fontDescription" name="DKMidnightChalker-Regular" family="DK Midnight Chalker" pointSize="26"/>
+                                <color key="textColor" red="0.7843137255" green="0.6705882353" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="re2-Lo-Guq">
+                                <rect key="frame" x="27" y="169" width="320" height="152"/>
+                                <color key="backgroundColor" red="1" green="0.96078431372549022" blue="0.87863743956486695" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="DKMidnightChalker-Regular" family="DK Midnight Chalker" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="WIF-eH-toT" firstAttribute="centerX" secondItem="vch-7x-Xx7" secondAttribute="centerX" id="1VY-K5-kAz"/>
+                            <constraint firstItem="F6M-A8-c11" firstAttribute="trailing" secondItem="re2-Lo-Guq" secondAttribute="trailing" id="2Ag-ch-E2q"/>
                             <constraint firstAttribute="bottom" secondItem="o6b-SN-OJS" secondAttribute="bottom" id="5G6-vL-NVb"/>
+                            <constraint firstItem="Fbw-lv-6Uu" firstAttribute="trailing" secondItem="re2-Lo-Guq" secondAttribute="trailing" constant="-25" id="5Ov-6c-OIG"/>
+                            <constraint firstItem="Fbw-lv-6Uu" firstAttribute="top" secondItem="re2-Lo-Guq" secondAttribute="bottom" constant="29" id="5Xg-Z4-zV4"/>
                             <constraint firstItem="o6b-SN-OJS" firstAttribute="centerX" secondItem="Pw5-qg-lyp" secondAttribute="centerX" id="9Zz-4f-ATX"/>
                             <constraint firstItem="Pw5-qg-lyp" firstAttribute="centerX" secondItem="vch-7x-Xx7" secondAttribute="centerX" id="A47-pT-Lmf"/>
-                            <constraint firstItem="Fbw-lv-6Uu" firstAttribute="centerY" secondItem="vch-7x-Xx7" secondAttribute="centerY" constant="-73" id="HaQ-Gd-fFq"/>
                             <constraint firstItem="o6b-SN-OJS" firstAttribute="top" secondItem="vch-7x-Xx7" secondAttribute="top" id="NC2-pB-Wpm"/>
-                            <constraint firstItem="Fbw-lv-6Uu" firstAttribute="leading" secondItem="V7a-l9-RrY" secondAttribute="leading" constant="53" id="drZ-Ef-J7z"/>
+                            <constraint firstItem="Fbw-lv-6Uu" firstAttribute="leading" secondItem="re2-Lo-Guq" secondAttribute="leading" constant="26" id="f8h-gz-kvP"/>
+                            <constraint firstItem="Fbw-lv-6Uu" firstAttribute="centerX" secondItem="Pw5-qg-lyp" secondAttribute="centerX" id="gLG-Dq-iG1"/>
+                            <constraint firstItem="Fbw-lv-6Uu" firstAttribute="leading" secondItem="V7a-l9-RrY" secondAttribute="leading" constant="53" id="jYb-aj-CTx"/>
                             <constraint firstAttribute="trailing" secondItem="o6b-SN-OJS" secondAttribute="trailing" id="krH-Js-JaZ"/>
+                            <constraint firstItem="re2-Lo-Guq" firstAttribute="top" secondItem="V7a-l9-RrY" secondAttribute="top" constant="149" id="qaE-Uf-gcq"/>
                             <constraint firstItem="V7a-l9-RrY" firstAttribute="bottom" secondItem="Pw5-qg-lyp" secondAttribute="bottom" constant="17" id="qxi-kX-SaQ"/>
+                            <constraint firstItem="re2-Lo-Guq" firstAttribute="top" secondItem="F6M-A8-c11" secondAttribute="bottom" constant="8" symbolic="YES" id="tIC-BJ-GOr"/>
                             <constraint firstItem="o6b-SN-OJS" firstAttribute="leading" secondItem="vch-7x-Xx7" secondAttribute="leading" id="uXj-hz-cl5"/>
+                            <constraint firstItem="Pw5-qg-lyp" firstAttribute="top" secondItem="Fbw-lv-6Uu" secondAttribute="bottom" constant="60" id="un9-xC-U2z"/>
+                            <constraint firstItem="WIF-eH-toT" firstAttribute="top" secondItem="V7a-l9-RrY" secondAttribute="top" constant="73" id="uuy-0t-jF6"/>
+                            <constraint firstItem="F6M-A8-c11" firstAttribute="leading" secondItem="re2-Lo-Guq" secondAttribute="leading" id="wXn-yW-3EZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V7a-l9-RrY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="JIS-zl-3FW" appends="YES" id="uxm-cE-qFc"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="angryButton" destination="01o-yH-wgA" id="ABQ-Lf-1ne"/>
@@ -885,10 +926,16 @@
                         <outlet property="joyDescription" destination="gsw-e4-ccS" id="eqM-02-fHx"/>
                         <outlet property="sadButton" destination="oak-RC-6mc" id="trs-xd-d0x"/>
                         <outlet property="sadDescription" destination="fIT-ux-F2M" id="aaH-7P-dnG"/>
+                        <outlet property="textView" destination="re2-Lo-Guq" id="8As-TV-OPT"/>
                         <segue destination="PFR-WW-CK1" kind="show" identifier="backToToday" id="p3R-Dr-rfu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7U-CA-fgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JIS-zl-3FW">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="kXb-PT-9Xa" id="ImF-k2-GQy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1623.2" y="362.96851574212894"/>
         </scene>
@@ -1056,7 +1103,7 @@
         <image name="settings" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p3R-Dr-rfu"/>
+        <segue reference="Ix8-sU-f9s"/>
         <segue reference="yaz-29-vfK"/>
     </inferredMetricsTieBreakers>
 </document>

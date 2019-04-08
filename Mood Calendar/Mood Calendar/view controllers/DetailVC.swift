@@ -1,6 +1,6 @@
 import UIKit
 
-class DetailVC: UIViewController {
+class DetailVC: UIViewController, UITextViewDelegate {
     @IBOutlet var joyButton: UIButton!
     @IBOutlet var sadButton: UIButton!
     @IBOutlet var angryButton: UIButton!
@@ -27,9 +27,36 @@ class DetailVC: UIViewController {
     let purpleMood = UIColor(red: 199/255, green: 151/255, blue: 255/255, alpha: 1)
     let whiteMood = UIColor.lightGray
     
+    @IBOutlet var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.delegate = self
+        textView.textAlignment = .center
+        textView.text = "\n\n\nWhat happened today?"
+        textView.textColor = UIColor.lightGray
         setMoodColor()
+    }
+    
+    //https://stackoverflow.com/questions/27652227/text-view-placeholder-swift
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.textAlignment = .left
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.textAlignment = .center
+            textView.text = "\n\n\nWhat happened today?"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        textView.resignFirstResponder()
     }
     
     func setMoodColor(){
@@ -39,6 +66,10 @@ class DetailVC: UIViewController {
         disgustButton.backgroundColor = greenMood
         calmButton.backgroundColor = purpleMood
         clearButton.backgroundColor = whiteMood
+    }
+    
+    func recordNotes(){
+        print("\n\n\n" + textView.text! + "\n\n\n")
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -72,8 +103,14 @@ class DetailVC: UIViewController {
                 sender as AnyObject? === clearDescription{
                 dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = "nil"
             }
+            if textView.text! != "\n\n\nWhat happened today?" {
+                recordNotes()
+            }else{
+                print("\n\n\ndidnt record\n\n\n")
+            }
             todayVC.dateInfo = self.dateInfo!
             todayVC.monthInfo = self.monthInfo
         }
     }
 }
+
