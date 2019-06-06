@@ -29,6 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        //create userdefaults for notes, one time use
+        if UserDefaults.standard.value(forKey: "month1Notes") == nil{
+            let defaults = UserDefaults.standard
+            for month in 1...12{
+                defaults.set([:], forKey: "month" + String(month) + "Notes")
+            }
+        }
+        
         let uiTabBar = window!.rootViewController as! UITabBarVC
         uiTabBar.dateInfo = dateInfo
         

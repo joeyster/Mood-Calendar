@@ -73,9 +73,9 @@ class TodayVC: UIViewController {
         super.viewDidLoad()
         fillButtonSets()
         fillCalendar()
+        clearNonEssentials()
         setToday()
         setMonthPicture()
-        clearNonEssentials()
     }
     
     override func viewDidAppear(_ animated: Bool) {

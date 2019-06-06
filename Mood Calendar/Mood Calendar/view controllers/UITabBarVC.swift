@@ -2,6 +2,7 @@ import UIKit
 import Foundation
 
 class UITabBarVC: UITabBarController {
+    
     var dateInfo : DateInfo?
     var monthInfo = MonthCalendar()
     
@@ -17,6 +18,10 @@ class UITabBarVC: UITabBarController {
         //passes info to CalendarVC
         let calendarVC = self.viewControllers?[1] as! CalendarVC
         calendarVC.dateInfo = self.dateInfo
+        
+        let result = UserDefaults.standard.value(forKey: "month4Notes")
+        print(result)
+        print(type(of: result))
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
