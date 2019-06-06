@@ -19,9 +19,9 @@ class UITabBarVC: UITabBarController {
         let calendarVC = self.viewControllers?[1] as! CalendarVC
         calendarVC.dateInfo = self.dateInfo
         
-        let result = UserDefaults.standard.value(forKey: "month4Notes")
-        print(result)
-        print(type(of: result))
+//        let result = UserDefaults.standard.value(forKey: "month4Notes")
+//        print(result)
+//        print(type(of: result))
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

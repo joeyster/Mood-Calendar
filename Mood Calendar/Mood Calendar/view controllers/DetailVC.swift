@@ -37,8 +37,6 @@ class DetailVC: UIViewController, UITextViewDelegate {
         setMoodColor()
     }
     
-    
-    
     //https://stackoverflow.com/questions/27652227/text-view-placeholder-swift
     func initialTextView(){
         textView.delegate = self
@@ -83,11 +81,21 @@ class DetailVC: UIViewController, UITextViewDelegate {
             textView.textAlignment = .left
             textView.textColor = UIColor.black
         }
+        else{
+            textView.textAlignment = .center
+            textView.text = "\n\n\nWhat happened today?"
+            textView.textColor = UIColor.lightGray
+        }
     }
     
     func recordNotes(){
         let defaults = UserDefaults.standard
-        monthDict[String(self.dateNumber)] = textView.text!
+        if textView.text! != "" {
+            monthDict[String(self.dateNumber)] = textView.text!
+        }
+        else{
+            monthDict[String(self.dateNumber)] = nil
+        }
         defaults.setValue(monthDict, forKey: "month" + String(monthInfo.dateComponents.month!) + "Notes")
     }
     
@@ -122,7 +130,11 @@ class DetailVC: UIViewController, UITextViewDelegate {
                 sender as AnyObject? === clearDescription{
                 dateInfo?.yearMonths2019[monthInfo.dateComponents.month!]?[self.dateNumber] = "nil"
             }
-            if textView.text! != "\n\n\nWhat happened today?" && textView.text! != "" {
+            if textView.text! != "\n\n\nWhat happened today?" {
+                recordNotes()
+            }
+            else{
+                textView.text = ""
                 recordNotes()
             }
             todayVC.dateInfo = self.dateInfo!
