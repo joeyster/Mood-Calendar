@@ -1,2 +1,2 @@
 # Mood-Calendar
-![Screenshots](/screenshots/Whole_Year_View.jpg)
+![Whole year view](/Screenshots/Whole_Year_View.jpg)
