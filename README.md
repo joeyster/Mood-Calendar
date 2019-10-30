@@ -1,2 +1,2 @@
 # Mood-Calendar
-![Screenshots](/app store screenshots/Whole Year View.jpg "Optional Title")
+![Screenshots](/app store screenshots/Whole Year View.jpg)
